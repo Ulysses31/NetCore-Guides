@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseLibrary", "DatabaseLibrary\DatabaseLibrary.csproj", "{77D5A5DC-E690-4787-A178-D8E2C3523C41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseLibrary_XUnit_Tests", "DatabaseLibrary_XUnit_Tests\DatabaseLibrary_XUnit_Tests.csproj", "{20D1F589-D8B3-4BF2-ABB1-74803E656007}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77D5A5DC-E690-4787-A178-D8E2C3523C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D5A5DC-E690-4787-A178-D8E2C3523C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D5A5DC-E690-4787-A178-D8E2C3523C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D5A5DC-E690-4787-A178-D8E2C3523C41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20D1F589-D8B3-4BF2-ABB1-74803E656007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20D1F589-D8B3-4BF2-ABB1-74803E656007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20D1F589-D8B3-4BF2-ABB1-74803E656007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20D1F589-D8B3-4BF2-ABB1-74803E656007}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
