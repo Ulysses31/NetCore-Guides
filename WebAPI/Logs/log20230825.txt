@@ -1,0 +1,102 @@
+2023-08-25 07:53:31.747 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-08-25 07:53:31.792 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-08-25 07:53:31.794 +03:00 [DBG] Hosting starting
+2023-08-25 07:53:31.814 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-08-25 07:53:31.814 +03:00 [DBG] Hosting started
+2023-08-25 07:53:47.315 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-08-25 07:53:47.379 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-08-25 07:53:47.381 +03:00 [DBG] Hosting starting
+2023-08-25 07:53:47.499 +03:00 [INF] Now listening on: https://localhost:7044
+2023-08-25 07:53:47.501 +03:00 [INF] Now listening on: http://localhost:5101
+2023-08-25 07:53:47.502 +03:00 [DBG] Loaded hosting startup assembly WebAPI
+2023-08-25 07:53:47.506 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-25 07:53:47.508 +03:00 [INF] Hosting environment: Development
+2023-08-25 07:53:47.510 +03:00 [INF] Content root path: C:\Users\ciordanidis\Documents\Workspace\Net_Workspace\Guides\WebAPI
+2023-08-25 07:53:47.510 +03:00 [DBG] Hosting started
+2023-08-25 07:53:47.720 +03:00 [DBG] Connection id "0HMT54T2AEOHC" accepted.
+2023-08-25 07:53:47.722 +03:00 [DBG] Connection id "0HMT54T2AEOHC" started.
+2023-08-25 07:53:47.803 +03:00 [DBG] Connection 0HMT54T2AEOHC established using the following protocol: "Tls13"
+2023-08-25 07:53:47.910 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/ - -
+2023-08-25 07:53:47.911 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-08-25 07:53:47.916 +03:00 [DBG] The request path  does not match the path filter
+2023-08-25 07:53:47.921 +03:00 [DBG] No Content-Type header for request body.
+2023-08-25 07:53:47.922 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7044
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.54
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+DNT: 1
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-08-25 07:53:47.924 +03:00 [DBG] The request path / does not match a supported file type
+2023-08-25 07:53:47.934 +03:00 [DBG] No candidates found for the request path '/'
+2023-08-25 07:53:47.935 +03:00 [DBG] Request did not match any endpoints
+2023-08-25 07:53:47.944 +03:00 [DBG] Request did not match any routes
+2023-08-25 07:53:47.945 +03:00 [INF] Response:
+StatusCode: 404
+2023-08-25 07:53:47.949 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/ - - - 404 0 - 41.6647ms
+2023-08-25 07:54:10.922 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger - -
+2023-08-25 07:54:10.926 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger - - - 302 0 - 4.4090ms
+2023-08-25 07:54:10.936 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/index.html - -
+2023-08-25 07:54:11.080 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/index.html - - - 200 - text/html;+charset=utf-8 143.9418ms
+2023-08-25 07:54:11.130 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/swagger-ui.css - -
+2023-08-25 07:54:11.143 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/assets/custom-ui.css - -
+2023-08-25 07:54:11.144 +03:00 [DBG] The request path  does not match the path filter
+2023-08-25 07:54:11.144 +03:00 [DBG] No Content-Type header for request body.
+2023-08-25 07:54:11.144 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/swagger-ui-bundle.js - -
+2023-08-25 07:54:11.144 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /assets/custom-ui.css
+Accept: text/css,*/*;q=0.1
+Host: localhost:7044
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.54
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+DNT: 1
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-08-25 07:54:11.183 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/swagger-ui-standalone-preset.js - -
+2023-08-25 07:54:11.229 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/css
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 29 Mar 2023 10:28:01 GMT
+Content-Length: 157031
+2023-08-25 07:54:11.273 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-08-25 07:54:11.273 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-08-25 07:54:11.277 +03:00 [INF] Sending file. Request path: '/assets/custom-ui.css'. Physical path: 'C:\Users\ciordanidis\Documents\Workspace\Net_Workspace\Guides\WebAPI\wwwroot\assets\custom-ui.css'
+2023-08-25 07:54:11.278 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/swagger-ui.css - - - 200 145208 text/css 148.3378ms
+2023-08-25 07:54:11.278 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/swagger-ui-standalone-preset.js - - - 200 322865 text/javascript 94.8743ms
+2023-08-25 07:54:11.278 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/assets/custom-ui.css - - - 200 157031 text/css 135.6868ms
+2023-08-25 07:54:11.297 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-08-25 07:54:11.298 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/swagger-ui-bundle.js - - - 200 1045710 text/javascript 154.0534ms
+2023-08-25 07:54:11.539 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/v1/swagger.json - -
+2023-08-25 07:54:11.566 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/favicon-32x32.png - -
+2023-08-25 07:54:11.573 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-08-25 07:54:11.574 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/favicon-32x32.png - - - 200 628 image/png 7.1805ms
+2023-08-25 07:54:11.726 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 187.2710ms
+2023-08-25 07:54:26.428 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/v2/swagger.json - -
+2023-08-25 07:54:26.435 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/v2/swagger.json - - - 200 - application/json;+charset=utf-8 7.4878ms
+2023-08-25 07:54:33.516 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/v1/swagger.json - -
+2023-08-25 07:54:33.517 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 0.7008ms

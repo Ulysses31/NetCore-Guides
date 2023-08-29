@@ -1,0 +1,20 @@
+{
+  "x-generator": "NSwag v13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v10.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "WebAPI API",
+    "description": "ASP.NET Core WebAPI API",
+    "termsOfService": "None",
+    "contact": {
+      "name": "Iordanidis Chris",
+      "url": "https://www.linkedin.com/in/iordanidischristos/",
+      "email": "info@datacenter.com"
+    },
+    "license": {
+      "name": "MIT License",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    "version": "v1.0"
+  },
+  "components": {}
+}

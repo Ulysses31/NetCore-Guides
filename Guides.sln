@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseLibrary", "Database
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseLibrary_XUnit_Tests", "DatabaseLibrary_XUnit_Tests\DatabaseLibrary_XUnit_Tests.csproj", "{20D1F589-D8B3-4BF2-ABB1-74803E656007}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{D217F1AE-EF82-484B-8941-4935B91DA0CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{20D1F589-D8B3-4BF2-ABB1-74803E656007}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20D1F589-D8B3-4BF2-ABB1-74803E656007}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20D1F589-D8B3-4BF2-ABB1-74803E656007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D217F1AE-EF82-484B-8941-4935B91DA0CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D217F1AE-EF82-484B-8941-4935B91DA0CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D217F1AE-EF82-484B-8941-4935B91DA0CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D217F1AE-EF82-484B-8941-4935B91DA0CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
