@@ -153,3 +153,9 @@ dotnet ef --project ..\WebAPI\WebAPI.csproj -v database update
 ```bash
 dotnet ef --project ..\WebAPI\WebAPI.csproj -v database drop
 ```
+
+## Set Running Environment
+```bash
+dotnet run --environment "Development"
+dotnet run --environment "Production"
+``` 

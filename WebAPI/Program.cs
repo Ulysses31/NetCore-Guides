@@ -1,11 +1,20 @@
 using System.Collections.Specialized;
+using System.Configuration;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
+using Microsoft.Extensions.Configuration;
 using Namotion.Reflection;
 using Serilog;
 using WebAPI;
+using WebAPI.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
+var envName = builder.Environment.EnvironmentName;
+Debug.Write("--> Environment: " + envName);
 
 // ########  Add services to the container. ######### //
 #region Services
@@ -148,6 +157,28 @@ builder.Services.AddOpenApiDocument(
       GC.Collect();
     };
   });
+
+
+// Database Context
+builder.Services.AddDbContext<CommandContext>((options)
+  => options.UseSqlServer(builder.Configuration["ConnectionStrings:MsSqlConnection"])
+      .LogTo(
+        message => Console.WriteLine(message),
+        envName == "Development" ? LogLevel.Trace : LogLevel.Error,
+        DbContextLoggerOptions.DefaultWithUtcTime
+      )
+      .LogTo(
+        message => Debug.WriteLine(message),
+        envName == "Development" ? LogLevel.Trace : LogLevel.Error,
+        DbContextLoggerOptions.DefaultWithUtcTime
+      )
+      .EnableDetailedErrors(envName == "Development")
+      .EnableSensitiveDataLogging(envName == "Development")
+      .ConfigureWarnings(
+        w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning)
+      )
+);
+
 #endregion Services
 // ########  Add services to the container. ######### //
 

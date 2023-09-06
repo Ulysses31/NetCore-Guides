@@ -1,0 +1,622 @@
+2023-09-06 15:12:07.879 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:12:07.942 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:12:07.944 +03:00 [DBG] Hosting starting
+2023-09-06 15:12:07.961 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 15:12:07.961 +03:00 [DBG] Hosting started
+2023-09-06 15:12:29.251 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:12:29.294 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:12:29.296 +03:00 [DBG] Hosting starting
+2023-09-06 15:12:29.311 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 15:12:29.311 +03:00 [DBG] Hosting started
+2023-09-06 15:12:40.656 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:12:40.705 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:12:40.707 +03:00 [DBG] Hosting starting
+2023-09-06 15:12:40.790 +03:00 [INF] Now listening on: https://localhost:7044
+2023-09-06 15:12:40.791 +03:00 [INF] Now listening on: http://localhost:5101
+2023-09-06 15:12:40.791 +03:00 [DBG] Loaded hosting startup assembly WebAPI
+2023-09-06 15:12:40.792 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-06 15:12:40.793 +03:00 [INF] Hosting environment: Development
+2023-09-06 15:12:40.793 +03:00 [INF] Content root path: C:\Users\ciordanidis\Documents\Workspace\Net_Workspace\Guides\WebAPI
+2023-09-06 15:12:40.794 +03:00 [DBG] Hosting started
+2023-09-06 15:12:47.794 +03:00 [DBG] Connection id "0HMTEQAAO9LSL" accepted.
+2023-09-06 15:12:47.799 +03:00 [DBG] Connection id "0HMTEQAAO9LSL" started.
+2023-09-06 15:12:47.860 +03:00 [DBG] Connection 0HMTEQAAO9LSL established using the following protocol: "Tls13"
+2023-09-06 15:12:48.004 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/ - -
+2023-09-06 15:12:48.006 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-06 15:12:48.025 +03:00 [DBG] The request path  does not match the path filter
+2023-09-06 15:12:48.036 +03:00 [DBG] No Content-Type header for request body.
+2023-09-06 15:12:48.041 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7044
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+DNT: 1
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-09-06 15:12:48.045 +03:00 [DBG] The request path / does not match a supported file type
+2023-09-06 15:12:48.059 +03:00 [DBG] No candidates found for the request path '/'
+2023-09-06 15:12:48.061 +03:00 [DBG] Request did not match any endpoints
+2023-09-06 15:12:48.080 +03:00 [DBG] Request did not match any routes
+2023-09-06 15:12:48.081 +03:00 [INF] Response:
+StatusCode: 404
+2023-09-06 15:12:48.083 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/ - - - 404 0 - 98.0585ms
+2023-09-06 15:12:56.921 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/index.htm - -
+2023-09-06 15:12:56.923 +03:00 [DBG] The request path /index.htm does not match an existing file
+2023-09-06 15:12:56.923 +03:00 [DBG] No Content-Type header for request body.
+2023-09-06 15:12:56.924 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/index.htm
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7044
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+DNT: 1
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-09-06 15:12:56.929 +03:00 [DBG] The request path /swagger/index.htm does not match an existing file
+2023-09-06 15:12:56.930 +03:00 [DBG] No candidates found for the request path '/swagger/index.htm'
+2023-09-06 15:12:56.930 +03:00 [DBG] Request did not match any endpoints
+2023-09-06 15:12:56.931 +03:00 [DBG] Request did not match any routes
+2023-09-06 15:12:56.931 +03:00 [INF] Response:
+StatusCode: 404
+2023-09-06 15:12:56.932 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/index.htm - - - 404 0 - 10.3769ms
+2023-09-06 15:13:04.523 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger - -
+2023-09-06 15:13:04.526 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger - - - 302 0 - 3.1117ms
+2023-09-06 15:13:04.541 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/index.html - -
+2023-09-06 15:13:04.629 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/index.html - - - 200 - text/html;+charset=utf-8 87.6091ms
+2023-09-06 15:13:04.679 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/swagger-ui.css - -
+2023-09-06 15:13:04.695 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/swagger-ui-standalone-preset.js - -
+2023-09-06 15:13:04.695 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/assets/custom-ui.css - -
+2023-09-06 15:13:04.695 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/swagger-ui-bundle.js - -
+2023-09-06 15:13:04.696 +03:00 [DBG] The request path  does not match the path filter
+2023-09-06 15:13:04.696 +03:00 [DBG] No Content-Type header for request body.
+2023-09-06 15:13:04.697 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /assets/custom-ui.css
+Accept: text/css,*/*;q=0.1
+Host: localhost:7044
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+DNT: 1
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-09-06 15:13:04.698 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/css
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 29 Mar 2023 10:28:01 GMT
+Content-Length: 157031
+2023-09-06 15:13:04.706 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-09-06 15:13:04.706 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-09-06 15:13:04.707 +03:00 [INF] Sending file. Request path: '/assets/custom-ui.css'. Physical path: 'C:\Users\ciordanidis\Documents\Workspace\Net_Workspace\Guides\WebAPI\wwwroot\assets\custom-ui.css'
+2023-09-06 15:13:04.708 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/assets/custom-ui.css - - - 200 157031 text/css 12.9380ms
+2023-09-06 15:13:04.708 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/swagger-ui.css - - - 200 145208 text/css 29.2042ms
+2023-09-06 15:13:04.708 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/swagger-ui-standalone-preset.js - - - 200 322865 text/javascript 13.6976ms
+2023-09-06 15:13:04.729 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-09-06 15:13:04.729 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/swagger-ui-bundle.js - - - 200 1045710 text/javascript 34.5500ms
+2023-09-06 15:13:05.041 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/v1/swagger.json - -
+2023-09-06 15:13:05.066 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/favicon-32x32.png - -
+2023-09-06 15:13:05.067 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-09-06 15:13:05.068 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/favicon-32x32.png - - - 200 628 image/png 1.4880ms
+2023-09-06 15:13:05.190 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 148.6043ms
+2023-09-06 15:13:32.823 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/v2/swagger.json - -
+2023-09-06 15:13:32.831 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/v2/swagger.json - - - 200 - application/json;+charset=utf-8 7.8649ms
+2023-09-06 15:13:43.262 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/v1/swagger.json - -
+2023-09-06 15:13:43.263 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 0.6483ms
+2023-09-06 15:15:53.684 +03:00 [DBG] Connection id "0HMTEQAAO9LSL" is closing.
+2023-09-06 15:15:53.692 +03:00 [DBG] Connection id "0HMTEQAAO9LSL" is closed. The last processed stream ID was 23.
+2023-09-06 15:15:53.695 +03:00 [DBG] Connection id "0HMTEQAAO9LSL" received FIN.
+2023-09-06 15:15:53.696 +03:00 [DBG] The connection queue processing loop for 0HMTEQAAO9LSL completed.
+2023-09-06 15:15:53.697 +03:00 [DBG] Connection id "0HMTEQAAO9LSL" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-06 15:15:53.715 +03:00 [DBG] Connection id "0HMTEQAAO9LSL" stopped.
+2023-09-06 15:23:28.411 +03:00 [INF] Application is shutting down...
+2023-09-06 15:23:28.413 +03:00 [DBG] Hosting stopping
+2023-09-06 15:23:28.428 +03:00 [DBG] Hosting stopped
+2023-09-06 15:23:47.246 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:23:47.294 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:23:47.297 +03:00 [DBG] Hosting starting
+2023-09-06 15:23:47.309 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 15:23:47.310 +03:00 [DBG] Hosting started
+2023-09-06 15:23:58.704 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:23:58.743 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:23:58.745 +03:00 [DBG] Hosting starting
+2023-09-06 15:23:58.816 +03:00 [INF] Now listening on: https://localhost:7044
+2023-09-06 15:23:58.816 +03:00 [INF] Now listening on: http://localhost:5101
+2023-09-06 15:23:58.816 +03:00 [DBG] Loaded hosting startup assembly WebAPI
+2023-09-06 15:23:58.818 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-06 15:23:58.818 +03:00 [INF] Hosting environment: Development
+2023-09-06 15:23:58.819 +03:00 [INF] Content root path: C:\Users\ciordanidis\Documents\Workspace\Net_Workspace\Guides\WebAPI
+2023-09-06 15:23:58.819 +03:00 [DBG] Hosting started
+2023-09-06 15:24:09.989 +03:00 [INF] Application is shutting down...
+2023-09-06 15:24:09.989 +03:00 [DBG] Hosting stopping
+2023-09-06 15:24:09.995 +03:00 [DBG] Hosting stopped
+2023-09-06 15:25:04.602 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:25:04.639 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:25:04.641 +03:00 [DBG] Hosting starting
+2023-09-06 15:25:04.651 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 15:25:04.652 +03:00 [DBG] Hosting started
+2023-09-06 15:25:15.786 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:25:15.825 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:25:15.827 +03:00 [DBG] Hosting starting
+2023-09-06 15:25:15.899 +03:00 [INF] Now listening on: https://localhost:7044
+2023-09-06 15:25:15.900 +03:00 [INF] Now listening on: http://localhost:5101
+2023-09-06 15:25:15.900 +03:00 [DBG] Loaded hosting startup assembly WebAPI
+2023-09-06 15:25:15.901 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-06 15:25:15.902 +03:00 [INF] Hosting environment: Development
+2023-09-06 15:25:15.902 +03:00 [INF] Content root path: C:\Users\ciordanidis\Documents\Workspace\Net_Workspace\Guides\WebAPI
+2023-09-06 15:25:15.903 +03:00 [DBG] Hosting started
+2023-09-06 15:25:32.328 +03:00 [INF] Application is shutting down...
+2023-09-06 15:25:32.329 +03:00 [DBG] Hosting stopping
+2023-09-06 15:25:32.336 +03:00 [DBG] Hosting stopped
+2023-09-06 15:27:48.009 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:27:48.049 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:27:48.054 +03:00 [DBG] Hosting starting
+2023-09-06 15:27:48.072 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 15:27:48.072 +03:00 [DBG] Hosting started
+2023-09-06 15:28:15.696 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:28:15.735 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:28:15.737 +03:00 [DBG] Hosting starting
+2023-09-06 15:28:15.752 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 15:28:15.752 +03:00 [DBG] Hosting started
+2023-09-06 15:28:26.984 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-09-06 15:28:27.248 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-06 15:28:27.353 +03:00 [DBG] Entity Framework Core 7.0.10 initialized 'CommandContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.10' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2023-09-06 15:28:27.360 +03:00 [DBG] Creating DbConnection.
+2023-09-06 15:28:27.364 +03:00 [DBG] Created DbConnection. (3ms).
+2023-09-06 15:28:27.369 +03:00 [DBG] 'CommandContext' disposed.
+2023-09-06 15:28:27.372 +03:00 [DBG] Disposing connection to database 'WebApi_Guides' on server '(localdb)\mssqllocaldb'.
+2023-09-06 15:28:27.377 +03:00 [DBG] Disposed connection to database '' on server '' (2ms).
+2023-09-06 15:35:13.039 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:35:13.073 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:35:13.075 +03:00 [DBG] Hosting starting
+2023-09-06 15:35:13.089 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 15:35:13.090 +03:00 [DBG] Hosting started
+2023-09-06 15:35:28.656 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:35:28.718 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:35:28.721 +03:00 [DBG] Hosting starting
+2023-09-06 15:35:28.842 +03:00 [INF] Now listening on: https://localhost:7044
+2023-09-06 15:35:28.844 +03:00 [INF] Now listening on: http://localhost:5101
+2023-09-06 15:35:28.845 +03:00 [DBG] Loaded hosting startup assembly WebAPI
+2023-09-06 15:35:28.848 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-06 15:35:28.851 +03:00 [INF] Hosting environment: Development
+2023-09-06 15:35:28.853 +03:00 [INF] Content root path: C:\Users\ciordanidis\Documents\Workspace\Net_Workspace\Guides\WebAPI
+2023-09-06 15:35:28.853 +03:00 [DBG] Hosting started
+2023-09-06 15:35:29.089 +03:00 [DBG] Connection id "0HMTEQN0EK54H" accepted.
+2023-09-06 15:35:29.097 +03:00 [DBG] Connection id "0HMTEQN0EK54H" started.
+2023-09-06 15:35:29.178 +03:00 [DBG] Connection 0HMTEQN0EK54H established using the following protocol: "Tls13"
+2023-09-06 15:35:29.308 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/ - -
+2023-09-06 15:35:29.309 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-06 15:35:29.318 +03:00 [DBG] The request path  does not match the path filter
+2023-09-06 15:35:29.323 +03:00 [DBG] No Content-Type header for request body.
+2023-09-06 15:35:29.324 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7044
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+DNT: 1
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-09-06 15:35:29.325 +03:00 [DBG] The request path / does not match a supported file type
+2023-09-06 15:35:29.337 +03:00 [DBG] No candidates found for the request path '/'
+2023-09-06 15:35:29.338 +03:00 [DBG] Request did not match any endpoints
+2023-09-06 15:35:29.347 +03:00 [DBG] Request did not match any routes
+2023-09-06 15:35:29.348 +03:00 [INF] Response:
+StatusCode: 404
+2023-09-06 15:35:29.354 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/ - - - 404 0 - 46.0238ms
+2023-09-06 15:37:29.358 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:37:29.392 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:37:29.394 +03:00 [DBG] Hosting starting
+2023-09-06 15:37:29.408 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 15:37:29.408 +03:00 [DBG] Hosting started
+2023-09-06 15:37:53.115 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:37:53.155 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:37:53.157 +03:00 [DBG] Hosting starting
+2023-09-06 15:37:53.173 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 15:37:53.173 +03:00 [DBG] Hosting started
+2023-09-06 15:38:08.149 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:38:08.227 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:38:08.230 +03:00 [DBG] Hosting starting
+2023-09-06 15:38:08.366 +03:00 [INF] Now listening on: https://localhost:7044
+2023-09-06 15:38:08.368 +03:00 [INF] Now listening on: http://localhost:5101
+2023-09-06 15:38:08.369 +03:00 [DBG] Loaded hosting startup assembly WebAPI
+2023-09-06 15:38:08.372 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-06 15:38:08.374 +03:00 [INF] Hosting environment: Development
+2023-09-06 15:38:08.376 +03:00 [INF] Content root path: C:\Users\ciordanidis\Documents\Workspace\Net_Workspace\Guides\WebAPI
+2023-09-06 15:38:08.376 +03:00 [DBG] Hosting started
+2023-09-06 15:38:08.545 +03:00 [DBG] Connection id "0HMTEQOFV9SBV" accepted.
+2023-09-06 15:38:08.554 +03:00 [DBG] Connection id "0HMTEQOFV9SBV" started.
+2023-09-06 15:38:08.602 +03:00 [DBG] Connection 0HMTEQOFV9SBV established using the following protocol: "Tls13"
+2023-09-06 15:38:08.694 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/ - -
+2023-09-06 15:38:08.697 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-06 15:38:08.706 +03:00 [DBG] The request path  does not match the path filter
+2023-09-06 15:38:08.724 +03:00 [DBG] No Content-Type header for request body.
+2023-09-06 15:38:08.726 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7044
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+DNT: 1
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-09-06 15:38:08.728 +03:00 [DBG] The request path / does not match a supported file type
+2023-09-06 15:38:08.736 +03:00 [DBG] No candidates found for the request path '/'
+2023-09-06 15:38:08.737 +03:00 [DBG] Request did not match any endpoints
+2023-09-06 15:38:08.750 +03:00 [DBG] Request did not match any routes
+2023-09-06 15:38:08.752 +03:00 [INF] Response:
+StatusCode: 404
+2023-09-06 15:38:08.759 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/ - - - 404 0 - 66.1370ms
+2023-09-06 15:41:54.420 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:41:54.461 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:41:54.463 +03:00 [DBG] Hosting starting
+2023-09-06 15:41:54.475 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 15:41:54.476 +03:00 [DBG] Hosting started
+2023-09-06 15:42:43.738 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:42:43.777 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:42:43.781 +03:00 [DBG] Hosting starting
+2023-09-06 15:42:43.795 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 15:42:43.796 +03:00 [DBG] Hosting started
+2023-09-06 15:42:59.164 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:42:59.237 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:42:59.239 +03:00 [DBG] Hosting starting
+2023-09-06 15:42:59.380 +03:00 [INF] Now listening on: https://localhost:7044
+2023-09-06 15:42:59.383 +03:00 [INF] Now listening on: http://localhost:5101
+2023-09-06 15:42:59.383 +03:00 [DBG] Loaded hosting startup assembly WebAPI
+2023-09-06 15:42:59.388 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-06 15:42:59.390 +03:00 [INF] Hosting environment: Development
+2023-09-06 15:42:59.392 +03:00 [INF] Content root path: C:\Users\ciordanidis\Documents\Workspace\Net_Workspace\Guides\WebAPI
+2023-09-06 15:42:59.392 +03:00 [DBG] Hosting started
+2023-09-06 15:42:59.570 +03:00 [DBG] Connection id "0HMTEQR6MO31R" accepted.
+2023-09-06 15:42:59.571 +03:00 [DBG] Connection id "0HMTEQR6MO31R" started.
+2023-09-06 15:42:59.635 +03:00 [DBG] Connection 0HMTEQR6MO31R established using the following protocol: "Tls13"
+2023-09-06 15:42:59.780 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/ - -
+2023-09-06 15:42:59.783 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-06 15:42:59.792 +03:00 [DBG] The request path  does not match the path filter
+2023-09-06 15:42:59.810 +03:00 [DBG] No Content-Type header for request body.
+2023-09-06 15:42:59.812 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7044
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+DNT: 1
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-09-06 15:42:59.814 +03:00 [DBG] The request path / does not match a supported file type
+2023-09-06 15:42:59.833 +03:00 [DBG] No candidates found for the request path '/'
+2023-09-06 15:42:59.835 +03:00 [DBG] Request did not match any endpoints
+2023-09-06 15:42:59.854 +03:00 [DBG] Request did not match any routes
+2023-09-06 15:42:59.856 +03:00 [INF] Response:
+StatusCode: 404
+2023-09-06 15:42:59.863 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/ - - - 404 0 - 88.8000ms
+2023-09-06 15:44:21.370 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:44:21.409 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:44:21.410 +03:00 [DBG] Hosting starting
+2023-09-06 15:44:21.421 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 15:44:21.421 +03:00 [DBG] Hosting started
+2023-09-06 15:44:32.567 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:44:32.607 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:44:32.609 +03:00 [DBG] Hosting starting
+2023-09-06 15:44:32.685 +03:00 [INF] Now listening on: https://localhost:7044
+2023-09-06 15:44:32.685 +03:00 [INF] Now listening on: http://localhost:5101
+2023-09-06 15:44:32.685 +03:00 [DBG] Loaded hosting startup assembly WebAPI
+2023-09-06 15:44:32.687 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-06 15:44:32.687 +03:00 [INF] Hosting environment: Development
+2023-09-06 15:44:32.687 +03:00 [INF] Content root path: C:\Users\ciordanidis\Documents\Workspace\Net_Workspace\Guides\WebAPI
+2023-09-06 15:44:32.688 +03:00 [DBG] Hosting started
+2023-09-06 15:45:42.826 +03:00 [INF] Application is shutting down...
+2023-09-06 15:45:42.828 +03:00 [DBG] Hosting stopping
+2023-09-06 15:45:42.844 +03:00 [DBG] Hosting stopped
+2023-09-06 15:52:01.558 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:52:01.604 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:52:01.606 +03:00 [DBG] Hosting starting
+2023-09-06 15:52:01.684 +03:00 [INF] Now listening on: https://localhost:7044
+2023-09-06 15:52:01.684 +03:00 [INF] Now listening on: http://localhost:5101
+2023-09-06 15:52:01.684 +03:00 [DBG] Loaded hosting startup assembly WebAPI
+2023-09-06 15:52:01.686 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-06 15:52:01.686 +03:00 [INF] Hosting environment: Development
+2023-09-06 15:52:01.687 +03:00 [INF] Content root path: C:\Users\ciordanidis\Documents\Workspace\Net_Workspace\Guides\WebAPI
+2023-09-06 15:52:01.687 +03:00 [DBG] Hosting started
+2023-09-06 15:52:34.813 +03:00 [INF] Application is shutting down...
+2023-09-06 15:52:34.814 +03:00 [DBG] Hosting stopping
+2023-09-06 15:52:34.826 +03:00 [DBG] Hosting stopped
+2023-09-06 15:58:30.925 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:58:30.967 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:58:30.969 +03:00 [DBG] Hosting starting
+2023-09-06 15:58:30.985 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 15:58:30.986 +03:00 [DBG] Hosting started
+2023-09-06 15:58:46.363 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 15:58:46.421 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 15:58:46.424 +03:00 [DBG] Hosting starting
+2023-09-06 15:58:46.554 +03:00 [INF] Now listening on: https://localhost:7044
+2023-09-06 15:58:46.554 +03:00 [INF] Now listening on: http://localhost:5101
+2023-09-06 15:58:46.554 +03:00 [DBG] Loaded hosting startup assembly WebAPI
+2023-09-06 15:58:46.555 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-06 15:58:46.556 +03:00 [INF] Hosting environment: Production
+2023-09-06 15:58:46.556 +03:00 [INF] Content root path: C:\Users\ciordanidis\Documents\Workspace\Net_Workspace\Guides\WebAPI
+2023-09-06 15:58:46.556 +03:00 [DBG] Hosting started
+2023-09-06 15:58:46.796 +03:00 [DBG] Connection id "0HMTER41068KH" accepted.
+2023-09-06 15:58:46.798 +03:00 [DBG] Connection id "0HMTER41068KH" started.
+2023-09-06 15:58:46.905 +03:00 [DBG] Connection 0HMTER41068KH established using the following protocol: "Tls13"
+2023-09-06 15:58:47.014 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/ - -
+2023-09-06 15:58:47.017 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-06 15:58:47.018 +03:00 [DBG] The host 'localhost' is excluded. Skipping HSTS header.
+2023-09-06 15:58:47.023 +03:00 [DBG] No Content-Type header for request body.
+2023-09-06 15:58:47.024 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7044
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+DNT: 1
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-09-06 15:58:47.026 +03:00 [DBG] The request path / does not match a supported file type
+2023-09-06 15:58:47.040 +03:00 [DBG] No candidates found for the request path '/'
+2023-09-06 15:58:47.040 +03:00 [DBG] Request did not match any endpoints
+2023-09-06 15:58:47.049 +03:00 [DBG] Request did not match any routes
+2023-09-06 15:58:47.050 +03:00 [INF] Response:
+StatusCode: 404
+2023-09-06 15:58:47.052 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/ - - - 404 0 - 40.8876ms
+2023-09-06 15:59:25.388 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/ - -
+2023-09-06 15:59:25.392 +03:00 [DBG] The host 'localhost' is excluded. Skipping HSTS header.
+2023-09-06 15:59:25.393 +03:00 [DBG] No Content-Type header for request body.
+2023-09-06 15:59:25.394 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7044
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+DNT: 1
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-09-06 15:59:25.394 +03:00 [DBG] The request path / does not match a supported file type
+2023-09-06 15:59:25.394 +03:00 [DBG] No candidates found for the request path '/'
+2023-09-06 15:59:25.395 +03:00 [DBG] Request did not match any endpoints
+2023-09-06 15:59:25.396 +03:00 [DBG] Request did not match any routes
+2023-09-06 15:59:25.396 +03:00 [INF] Response:
+StatusCode: 404
+2023-09-06 15:59:25.397 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/ - - - 404 0 - 8.9810ms
+2023-09-06 15:59:40.093 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/index.html?urls.primaryName=v1 - -
+2023-09-06 15:59:40.093 +03:00 [DBG] The host 'localhost' is excluded. Skipping HSTS header.
+2023-09-06 15:59:40.094 +03:00 [DBG] No Content-Type header for request body.
+2023-09-06 15:59:40.094 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/index.html
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7044
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+DNT: 1
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-09-06 15:59:40.095 +03:00 [DBG] The request path /swagger/index.html does not match an existing file
+2023-09-06 15:59:40.095 +03:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-09-06 15:59:40.095 +03:00 [DBG] Request did not match any endpoints
+2023-09-06 15:59:40.097 +03:00 [DBG] Request did not match any routes
+2023-09-06 15:59:40.097 +03:00 [INF] Response:
+StatusCode: 404
+2023-09-06 15:59:40.098 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/index.html?urls.primaryName=v1 - - - 404 0 - 4.6794ms
+2023-09-06 16:00:41.735 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 16:00:41.773 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 16:00:41.775 +03:00 [DBG] Hosting starting
+2023-09-06 16:00:41.787 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 16:00:41.787 +03:00 [DBG] Hosting started
+2023-09-06 16:00:53.034 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 16:00:53.076 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 16:00:53.079 +03:00 [DBG] Hosting starting
+2023-09-06 16:00:53.154 +03:00 [INF] Now listening on: https://localhost:7044
+2023-09-06 16:00:53.155 +03:00 [INF] Now listening on: http://localhost:5101
+2023-09-06 16:00:53.155 +03:00 [DBG] Loaded hosting startup assembly WebAPI
+2023-09-06 16:00:53.156 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-06 16:00:53.157 +03:00 [INF] Hosting environment: Development
+2023-09-06 16:00:53.157 +03:00 [INF] Content root path: C:\Users\ciordanidis\Documents\Workspace\Net_Workspace\Guides\WebAPI
+2023-09-06 16:00:53.158 +03:00 [DBG] Hosting started
+2023-09-06 16:01:18.942 +03:00 [DBG] Connection id "0HMTER5EB5NP0" accepted.
+2023-09-06 16:01:18.943 +03:00 [DBG] Connection id "0HMTER5EB5NP0" started.
+2023-09-06 16:01:18.996 +03:00 [DBG] Connection 0HMTER5EB5NP0 established using the following protocol: "Tls13"
+2023-09-06 16:01:19.035 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/index.html?urls.primaryName=v1 - -
+2023-09-06 16:01:19.036 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-06 16:01:19.123 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/index.html?urls.primaryName=v1 - - - 200 - text/html;+charset=utf-8 89.4900ms
+2023-09-06 16:01:19.504 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/v1/swagger.json - -
+2023-09-06 16:01:19.652 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/v1/swagger.json - - - 200 - application/json;+charset=utf-8 147.5872ms
+2023-09-06 16:01:23.598 +03:00 [INF] Application is shutting down...
+2023-09-06 16:01:23.600 +03:00 [DBG] Hosting stopping
+2023-09-06 16:01:23.614 +03:00 [DBG] Connection id "0HMTER5EB5NP0" is closing.
+2023-09-06 16:01:23.619 +03:00 [DBG] Connection id "0HMTER5EB5NP0" is closed. The last processed stream ID was 3.
+2023-09-06 16:01:23.621 +03:00 [DBG] Connection id "0HMTER5EB5NP0" received FIN.
+2023-09-06 16:01:23.623 +03:00 [DBG] The connection queue processing loop for 0HMTER5EB5NP0 completed.
+2023-09-06 16:01:23.624 +03:00 [DBG] Connection id "0HMTER5EB5NP0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-06 16:01:23.637 +03:00 [DBG] Connection id "0HMTER5EB5NP0" stopped.
+2023-09-06 16:01:23.641 +03:00 [DBG] Hosting stopped
+2023-09-06 16:01:53.737 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 16:01:53.770 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 16:01:53.772 +03:00 [DBG] Hosting starting
+2023-09-06 16:01:53.785 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 16:01:53.786 +03:00 [DBG] Hosting started
+2023-09-06 16:02:21.400 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 16:02:21.435 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 16:02:21.437 +03:00 [DBG] Hosting starting
+2023-09-06 16:02:21.447 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 16:02:21.448 +03:00 [DBG] Hosting started
+2023-09-06 16:02:32.608 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 16:02:32.649 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 16:02:32.651 +03:00 [DBG] Hosting starting
+2023-09-06 16:02:32.722 +03:00 [INF] Now listening on: https://localhost:7044
+2023-09-06 16:02:32.723 +03:00 [INF] Now listening on: http://localhost:5101
+2023-09-06 16:02:32.723 +03:00 [DBG] Loaded hosting startup assembly WebAPI
+2023-09-06 16:02:32.724 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-06 16:02:32.725 +03:00 [INF] Hosting environment: Development
+2023-09-06 16:02:32.725 +03:00 [INF] Content root path: C:\Users\ciordanidis\Documents\Workspace\Net_Workspace\Guides\WebAPI
+2023-09-06 16:02:32.726 +03:00 [DBG] Hosting started
+2023-09-06 16:02:39.275 +03:00 [INF] Application is shutting down...
+2023-09-06 16:02:39.275 +03:00 [DBG] Hosting stopping
+2023-09-06 16:02:39.282 +03:00 [DBG] Hosting stopped
+2023-09-06 16:04:42.043 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 16:04:42.080 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 16:04:42.082 +03:00 [DBG] Hosting starting
+2023-09-06 16:04:42.093 +03:00 [DBG] Loaded hosting startup assembly WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2023-09-06 16:04:42.094 +03:00 [DBG] Hosting started
+2023-09-06 16:04:53.722 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-06 16:04:53.758 +03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-09-06 16:04:53.760 +03:00 [DBG] Hosting starting
+2023-09-06 16:04:53.826 +03:00 [INF] Now listening on: https://localhost:7044
+2023-09-06 16:04:53.826 +03:00 [INF] Now listening on: http://localhost:5101
+2023-09-06 16:04:53.827 +03:00 [DBG] Loaded hosting startup assembly WebAPI
+2023-09-06 16:04:53.827 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-06 16:04:53.828 +03:00 [INF] Hosting environment: Production
+2023-09-06 16:04:53.828 +03:00 [INF] Content root path: C:\Users\ciordanidis\Documents\Workspace\Net_Workspace\Guides\WebAPI
+2023-09-06 16:04:53.828 +03:00 [DBG] Hosting started
+2023-09-06 16:05:04.164 +03:00 [DBG] Connection id "0HMTER7HF254S" accepted.
+2023-09-06 16:05:04.165 +03:00 [DBG] Connection id "0HMTER7HF254S" started.
+2023-09-06 16:05:04.199 +03:00 [DBG] Connection 0HMTER7HF254S established using the following protocol: "Tls13"
+2023-09-06 16:05:04.236 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7044/swagger/index.html?urls.primaryName=v1 - -
+2023-09-06 16:05:04.237 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-06 16:05:04.238 +03:00 [DBG] The host 'localhost' is excluded. Skipping HSTS header.
+2023-09-06 16:05:04.241 +03:00 [DBG] No Content-Type header for request body.
+2023-09-06 16:05:04.242 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/index.html
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7044
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+DNT: 1
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2023-09-06 16:05:04.245 +03:00 [DBG] The request path /swagger/index.html does not match an existing file
+2023-09-06 16:05:04.251 +03:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-09-06 16:05:04.251 +03:00 [DBG] Request did not match any endpoints
+2023-09-06 16:05:04.256 +03:00 [DBG] Request did not match any routes
+2023-09-06 16:05:04.257 +03:00 [INF] Response:
+StatusCode: 404
+2023-09-06 16:05:04.259 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7044/swagger/index.html?urls.primaryName=v1 - - - 404 0 - 23.9053ms
+2023-09-06 16:05:09.936 +03:00 [INF] Application is shutting down...
+2023-09-06 16:05:09.937 +03:00 [DBG] Hosting stopping
+2023-09-06 16:05:09.942 +03:00 [DBG] Connection id "0HMTER7HF254S" is closing.
+2023-09-06 16:05:09.945 +03:00 [DBG] Connection id "0HMTER7HF254S" is closed. The last processed stream ID was 1.
+2023-09-06 16:05:09.946 +03:00 [DBG] Connection id "0HMTER7HF254S" received FIN.
+2023-09-06 16:05:09.948 +03:00 [DBG] The connection queue processing loop for 0HMTER7HF254S completed.
+2023-09-06 16:05:09.949 +03:00 [DBG] Connection id "0HMTER7HF254S" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-06 16:05:09.968 +03:00 [DBG] Connection id "0HMTER7HF254S" stopped.
+2023-09-06 16:05:09.971 +03:00 [DBG] Hosting stopped
