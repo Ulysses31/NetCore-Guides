@@ -23,6 +23,7 @@
           "Commands"
         ],
         "summary": "Get all commands",
+        "description": "Sample request:\n            \n            \tGET /api/v1/commands",
         "operationId": "Commands_GetCommands",
         "responses": {
           "400": {
@@ -81,6 +82,7 @@
           "Commands"
         ],
         "summary": "AddCommand",
+        "description": "Sample request:\n            \n            \tPOST /api/v1/commands\n            \t{\n            \t\t\"howTo\": \"string\",\n            \t\t\"platform\": \"string\",\n            \t\t\"commandLine\": \"string\"\n            \t}",
         "operationId": "Commands_AddCommand",
         "requestBody": {
           "x-name": "commandItem",
@@ -151,6 +153,7 @@
           "Commands"
         ],
         "summary": "Get command by id",
+        "description": "Sample request:\n            \n            \tGET /api/v1/commands/{id}",
         "operationId": "Commands_GetCommandById",
         "parameters": [
           {
@@ -219,6 +222,7 @@
           "Commands"
         ],
         "summary": "UpdateCommand",
+        "description": "Sample request:\n            \n            \tPUT /api/v1/commands/{id}\n            \t{\n            \t\t\"id\": 0,\n            \t\t\"howTo\": \"string\",\n            \t\t\"platform\": \"string\",\n            \t\t\"commandLine\": \"string\"\n            \t}",
         "operationId": "Commands_UpdateCommand",
         "parameters": [
           {
@@ -300,6 +304,7 @@
           "Commands"
         ],
         "summary": "DeleteCommand",
+        "description": "Sample request:\n            \n            \tDELETE /api/v1/commands/{id}",
         "operationId": "Commands_DeleteCommand",
         "parameters": [
           {
