@@ -20,18 +20,18 @@ namespace WebAPI.Models
     /// HowTo
     /// </summary>
     /// <value>string</value>
-    public string? HowTo { get; set; }
+    public string HowTo { get; set; }
 
     /// <summary>
     /// Platform
     /// </summary>
     /// <value>string</value>
-    public string? Platform { get; set; }
+    public string Platform { get; set; }
 
     /// <summary>
     /// CommandLine
     /// </summary>
     /// <value>string</value>
-    public string? CommandLine { get; set; }
+    public string CommandLine { get; set; }
   }
 }

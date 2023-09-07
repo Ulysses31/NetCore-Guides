@@ -25,6 +25,6 @@ namespace WebAPI.Models
     /// CommandItems
     /// </summary>
     /// <value>DbSet of CommandDto</value>
-    public DbSet<CommandDto>? CommandItems { get; set; }
+    public DbSet<CommandDto> CommandItems { get; set; }
   }
 }

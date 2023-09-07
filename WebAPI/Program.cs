@@ -2,6 +2,7 @@ using System.Collections.Specialized;
 using System.Configuration;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -29,21 +30,25 @@ builder.Services.AddControllers(setupAction =>
 {
   setupAction.ReturnHttpNotAcceptable = true;
   setupAction.EnableEndpointRouting = false;
-  // setupAction.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
-  // setupAction.OutputFormatters.Add(new XmlSerializerOutputFormatter());
-  // setupAction.InputFormatters.Add(new XmlSerializerInputFormatter(setupAction));
-  // setupAction.InputFormatters.Add(new XmlDataContractSerializerInputFormatter(setupAction));
+  setupAction.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
+  setupAction.OutputFormatters.Add(new XmlSerializerOutputFormatter());
+  setupAction.InputFormatters.Add(new XmlSerializerInputFormatter(setupAction));
+  setupAction.InputFormatters.Add(new XmlDataContractSerializerInputFormatter(setupAction));
   // setupAction.Filters.Add(new ReqResLogger());
-  // setupAction.Filters.Add(
-  //   new ProducesResponseTypeAttribute(StatusCodes.Status400BadRequest));
-  // setupAction.Filters.Add(
-  //     new ProducesResponseTypeAttribute(StatusCodes.Status401Unauthorized));
-  // setupAction.Filters.Add(
-  //     new ProducesResponseTypeAttribute(StatusCodes.Status406NotAcceptable));
-  // setupAction.Filters.Add(
-  //     new ProducesResponseTypeAttribute(StatusCodes.Status500InternalServerError));
-  // setupAction.Filters.Add(
-  //     new ProducesDefaultResponseTypeAttribute());
+  //setupAction.Filters.Add(
+  //  new ProducesResponseTypeAttribute(StatusCodes.Status200OK));
+  setupAction.Filters.Add(
+    new ProducesResponseTypeAttribute(StatusCodes.Status400BadRequest));
+  setupAction.Filters.Add(
+    new ProducesResponseTypeAttribute(StatusCodes.Status404NotFound));
+  //setupAction.Filters.Add(
+  //    new ProducesResponseTypeAttribute(StatusCodes.Status401Unauthorized));
+  setupAction.Filters.Add(
+    new ProducesResponseTypeAttribute(StatusCodes.Status406NotAcceptable));
+  setupAction.Filters.Add(
+    new ProducesResponseTypeAttribute(StatusCodes.Status500InternalServerError));
+  //setupAction.Filters.Add(
+  //  new ProducesDefaultResponseTypeAttribute());
 }).AddXmlDataContractSerializerFormatters();
 
 // SERILOG
