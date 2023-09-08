@@ -150,6 +150,32 @@ dotnet add .\WebAPI.csproj package AspNetCoreRateLimit
 dotnet add .\WebAPI.csproj package AspNetCoreRateLimit.Redis
 ```
 
+## HealthChecks SQL Server
+
+[Health-Checks](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-7.0)
+
+```bash
+dotnet add .\WebAPI.csproj package AspNetCore.HealthChecks.SqlServer
+```
+
+```bash
+dotnet add .\WebAPI.csproj package Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore
+```
+
+```bash
+dotnet add .\WebAPI.csproj package AspNetCore.HealthChecks.UI
+```
+
+```bash
+dotnet add .\WebAPI.csproj package AspNetCore.HealthChecks.UI.Client
+```
+
+```bash
+dotnet add .\WebAPI.csproj package AspNetCore.HealthChecks.UI.InMemory.Storage
+```
+
+
+
 ## Entity Framework Core Migrations
 
 Migrations are different in MsSQL and MySQL so we output in different folder ( -o MigrationsSQL or -o MigrationsMySQL )

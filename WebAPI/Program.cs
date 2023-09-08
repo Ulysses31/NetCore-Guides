@@ -2,15 +2,17 @@ using System.Collections.Specialized;
 using System.Configuration;
 using System.Diagnostics;
 using AspNetCoreRateLimit;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using Microsoft.Extensions.Configuration;
 using Namotion.Reflection;
 using Serilog;
 using WebAPI;
+using WebAPI.Controllers.v1;
 using WebAPI.Models;
 
 
@@ -106,7 +108,7 @@ builder.Services.AddOpenApiDocument(
     {
       document.Info.Version = "v1.0";
       document.Info.Title = "WebAPI API";
-      document.Info.Description = "ASP.NET Core WebAPI API";
+      document.Info.Description = "ASP.NET Core WebAPI API - Health Check Dashboard UI -> https://localhost:7044/dashboard";
       document.Info.TermsOfService = "None";
       document.Info.License = new NSwag.OpenApiLicense
       {
@@ -144,7 +146,7 @@ builder.Services.AddOpenApiDocument(
     {
       document.Info.Version = "v2.0";
       document.Info.Title = "WebAPI API";
-      document.Info.Description = "ASP.NET Core WebAPI API";
+      document.Info.Description = "ASP.NET Core WebAPI API - Health Check Dashboard UI -> https://localhost:7044/dashboard";
       document.Info.TermsOfService = "None";
       document.Info.License = new NSwag.OpenApiLicense
       {
@@ -198,6 +200,23 @@ builder.Services.AddInMemoryRateLimiting();
 builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
 
 
+// Health Checks
+builder.Services
+  .AddHealthChecks()
+  .AddSqlServer(builder.Configuration["ConnectionStrings:MsSqlConnection"])
+  .AddDbContextCheck<CommandContext>()
+  .AddCheck<ApiCommandsHealthChecks>("API /api/v1/commands");
+
+
+// Health Checks UI
+builder.Services.AddHealthChecksUI(options =>
+{
+  options.SetEvaluationTimeInSeconds(60); //Sets the time interval in which HealthCheck will be triggered
+  options.MaximumHistoryEntriesPerEndpoint(10); //Sets the maximum number of records displayed in history
+  options.AddHealthCheckEndpoint("Health Checks API", "/health"); //Sets the Health Check endpoint
+}).AddInMemoryStorage(); //Here is the memory bank configuration
+
+
 #endregion Services
 // ########  Add services to the container. ######### //
 
@@ -242,6 +261,17 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+//Sets Health Check dashboard options
+app.UseHealthChecks("/health", new HealthCheckOptions
+{
+  Predicate = p => true,
+  ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+});
+
+//Sets the Health Check dashboard configuration
+app.UseHealthChecksUI(options => { options.UIPath = "/dashboard"; });
+
 
 app.Run();
 #endregion App
