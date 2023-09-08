@@ -138,6 +138,18 @@ dotnet add .\WebAPI.csproj package Microsoft.AspNetCore.Mvc.Versioning
 dotnet add .\WebAPI.csproj package Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer
 ```
 
+## API AspNetCoreRateLimit
+
+[IpRateLimitMiddleware GitHub Docs](https://github.com/stefanprodan/AspNetCoreRateLimit/wiki/IpRateLimitMiddleware)
+
+```bash
+dotnet add .\WebAPI.csproj package AspNetCoreRateLimit
+```
+
+```bash
+dotnet add .\WebAPI.csproj package AspNetCoreRateLimit.Redis
+```
+
 ## Entity Framework Core Migrations
 
 Migrations are different in MsSQL and MySQL so we output in different folder ( -o MigrationsSQL or -o MigrationsMySQL )

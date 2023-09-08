@@ -1,6 +1,7 @@
 using System.Collections.Specialized;
 using System.Configuration;
 using System.Diagnostics;
+using AspNetCoreRateLimit;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc.Versioning;
@@ -184,6 +185,19 @@ builder.Services.AddDbContext<CommandContext>((options)
       )
 );
 
+// AspNetCoreRateLimit
+builder.Services.AddOptions();
+builder.Services.AddMemoryCache();
+builder.Services.Configure<IpRateLimitOptions>(
+  builder.Configuration.GetSection("IpRateLimiting")
+);
+// builder.Services.Configure<IpRateLimitPolicies>(
+//   builder.Configuration.GetSection("IpRateLimitPolicies")
+// );
+builder.Services.AddInMemoryRateLimiting();
+builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+
+
 #endregion Services
 // ########  Add services to the container. ######### //
 
@@ -212,6 +226,8 @@ else
   // see https://aka.ms/aspnetcore-hsts.
   app.UseHsts();
 }
+
+app.UseIpRateLimiting();
 
 app.UseHttpLogging();
 
