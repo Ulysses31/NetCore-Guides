@@ -46,9 +46,20 @@ namespace WebAPI.Controllers.v1
     [MapToApiVersion("1.0")]
     [ProducesResponseType(typeof(IEnumerable<CommandDto>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public ActionResult<IEnumerable<CommandDto>> GetCommands()
     {
-      return Ok(_context.CommandItems);
+      try
+      {
+        return Ok(_context.CommandItems);
+      }
+      catch (System.Exception ex)
+      {
+        return StatusCode(
+          StatusCodes.Status500InternalServerError,
+          new { message = ex }
+        );
+      }
     }
 
     /// <summary>
@@ -72,13 +83,25 @@ namespace WebAPI.Controllers.v1
     [MapToApiVersion("1.0")]
     [ProducesResponseType(typeof(CommandDto), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public ActionResult<CommandDto> GetCommandById(int id)
     {
-      var commandItem = _context.CommandItems.Find(id);
+      try
+      {
+        var commandItem = _context.CommandItems.Find(id);
 
-      if (commandItem == null) return NotFound();
+        if (commandItem == null) return NotFound();
 
-      return Ok(commandItem);
+        return Ok(commandItem);
+      }
+      catch (System.Exception ex)
+      {
+        return StatusCode(
+          StatusCodes.Status500InternalServerError,
+          new { message = ex }
+        );
+      }
     }
 
     /// <summary>
@@ -106,19 +129,84 @@ namespace WebAPI.Controllers.v1
     [HttpPost]
     [MapToApiVersion("1.0")]
     [ProducesResponseType(typeof(CommandDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public ActionResult<CommandDto> AddCommand(CommandDto commandItem)
     {
-      if (commandItem == null) return BadRequest();
+      try
+      {
+        if (commandItem == null) return BadRequest();
 
-      _context.CommandItems.Add(commandItem);
-      _context.SaveChanges();
+        _context.CommandItems.Add(commandItem);
+        _context.SaveChanges();
 
-      return CreatedAtAction(
-        "GetCommandById",
-        new CommandDto() { Id = commandItem.Id },
-        commandItem
-      );
+        return CreatedAtAction(
+          "GetCommandById",
+          new CommandDto() { Id = commandItem.Id },
+          commandItem
+        );
+      }
+      catch (System.Exception ex)
+      {
+        return StatusCode(
+          StatusCodes.Status500InternalServerError,
+          new { message = ex }
+        );
+      }
+    }
+
+    /// <summary>
+    /// AddBatchCommand
+    /// </summary>
+    /// <param name="commandItems">CommandDto[]</param>
+    /// <returns>CommandDto</returns>
+    /// <remarks>
+    /// Sample request:
+    ///
+    ///	POST /api/v1/commands/batch
+    ///	[{
+    ///	  "howTo": "string",
+    ///	  "platform": "string",
+    ///	  "commandLine": "string"
+    ///	 },{
+    ///	  "howTo": "string",
+    ///	  "platform": "string",
+    ///	  "commandLine": "string"
+    ///	 }]
+    /// </remarks>
+    /// <response code="200">Http OK</response>
+    /// <response code="204">No Content</response>
+    /// <response code="400">Bad Request</response>
+    /// <response code="404">Not Found</response>
+    /// <response code="406">Not Acceptable</response>
+    /// <response code="500">Internal Server Error</response>
+    [HttpPost("batch")]
+    [MapToApiVersion("1.0")]
+    [ProducesResponseType(typeof(IEnumerable<CommandDto>), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public ActionResult<IEnumerable<CommandDto>> AddBatchCommand(CommandDto[] commandItems)
+    {
+      try
+      {
+        if (commandItems.Length == 0) return BadRequest();
+
+        _context.CommandItems.AddRange(commandItems);
+        _context.SaveChanges();
+
+        return Ok(commandItems);
+      }
+      catch (System.Exception ex)
+      {
+        return StatusCode(
+          StatusCodes.Status500InternalServerError,
+          new { message = ex }
+        );
+      }
     }
 
     /// <summary>
@@ -149,14 +237,26 @@ namespace WebAPI.Controllers.v1
     [MapToApiVersion("1.0")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public ActionResult<CommandDto> UpdateCommand(int id, CommandDto commandItem)
     {
-      if ((commandItem == null) || (id != commandItem.Id)) return BadRequest();
+      try
+      {
+        if ((commandItem == null) || (id != commandItem.Id)) return BadRequest();
 
-      _context.Entry(commandItem).State = EntityState.Modified;
-      _context.SaveChanges();
+        _context.Entry(commandItem).State = EntityState.Modified;
+        _context.SaveChanges();
 
-      return NoContent();
+        return NoContent();
+      }
+      catch (System.Exception ex)
+      {
+        return StatusCode(
+          StatusCodes.Status500InternalServerError,
+          new { message = ex }
+        );
+      }
     }
 
 
@@ -181,16 +281,29 @@ namespace WebAPI.Controllers.v1
     [MapToApiVersion("1.0")]
     [ProducesResponseType(typeof(CommandDto), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public ActionResult<CommandDto> DeleteCommand(int id)
     {
-      var commandItem = _context.CommandItems.Find(id);
+      try
+      {
+        var commandItem = _context.CommandItems.Find(id);
 
-      if (commandItem == null) return NotFound();
+        if (commandItem == null) return NotFound();
 
-      _context.CommandItems.Remove(commandItem);
-      _context.SaveChanges();
+        _context.CommandItems.Remove(commandItem);
+        _context.SaveChanges();
 
-      return Ok(commandItem);
+        return Ok(commandItem);
+      }
+      catch (System.Exception ex)
+      {
+        return StatusCode(
+          StatusCodes.Status500InternalServerError,
+          new { message = ex }
+        );
+      }
     }
 
   }

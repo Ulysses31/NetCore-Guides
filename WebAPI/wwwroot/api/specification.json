@@ -141,6 +141,16 @@
               }
             }
           },
+          "201": {
+            "description": "CommandDto",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommandDto"
+                }
+              }
+            }
+          },
           "204": {
             "description": "No Content"
           }
@@ -359,6 +369,96 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CommandDto"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/api/v1/Commands/batch": {
+      "post": {
+        "tags": [
+          "Commands"
+        ],
+        "summary": "AddBatchCommand",
+        "description": "Sample request:\n            \n            \tPOST /api/v1/commands/batch\n            \t[{\n            \t  \"howTo\": \"string\",\n            \t  \"platform\": \"string\",\n            \t  \"commandLine\": \"string\"\n            \t },{\n            \t  \"howTo\": \"string\",\n            \t  \"platform\": \"string\",\n            \t  \"commandLine\": \"string\"\n            \t }]",
+        "operationId": "Commands_AddBatchCommand",
+        "requestBody": {
+          "x-name": "commandItems",
+          "description": "CommandDto[]",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CommandDto"
+                }
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "Not Acceptable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          },
+          "200": {
+            "description": "Http OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CommandDto"
+                  }
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "CommandDto",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CommandDto"
+                  }
                 }
               }
             }
