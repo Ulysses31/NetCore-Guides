@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "6/ZzBdITw7IMZplJ9edG0bHiPqW1C4Fb+/G9Ss+MQz+5QleXmBQWFuUWjvY1gtKnj4iGQPuCekYTuaR90Cqn/Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ciordanidis\\Documents\\Workspace\\Net_Workspace\\Guides\\FaultHandling\\RequestService\\RequestService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0-rc.1.23419.4\\microsoft.extensions.configuration.abstractions.8.0.0-rc.1.23419.4.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0-rc.1.23419.4\\microsoft.extensions.dependencyinjection.8.0.0-rc.1.23419.4.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0-rc.1.23419.4\\microsoft.extensions.dependencyinjection.abstractions.8.0.0-rc.1.23419.4.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\microsoft.extensions.http\\8.0.0-rc.1.23419.4\\microsoft.extensions.http.8.0.0-rc.1.23419.4.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\microsoft.extensions.http.polly\\8.0.0-rc.1.23421.29\\microsoft.extensions.http.polly.8.0.0-rc.1.23421.29.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0-rc.1.23419.4\\microsoft.extensions.logging.8.0.0-rc.1.23419.4.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0-rc.1.23419.4\\microsoft.extensions.logging.abstractions.8.0.0-rc.1.23419.4.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\microsoft.extensions.options\\8.0.0-rc.1.23419.4\\microsoft.extensions.options.8.0.0-rc.1.23419.4.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0-rc.1.23419.4\\microsoft.extensions.primitives.8.0.0-rc.1.23419.4.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\polly\\7.2.4\\polly.7.2.4.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\polly.extensions.http\\3.0.0\\polly.extensions.http.3.0.0.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\ciordanidis\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
