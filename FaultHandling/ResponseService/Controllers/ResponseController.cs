@@ -19,7 +19,7 @@ namespace ResponseService.Controllers
     [HttpGet("{id:int}")]
     public ActionResult GetResponse(int id)
     {
-      Random rnd = new Random();
+      Random rnd = new();
       var rndInteger = rnd.Next(1, 101);
 
       if (rndInteger >= id)
