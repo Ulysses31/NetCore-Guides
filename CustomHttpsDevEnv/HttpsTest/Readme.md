@@ -1,119 +1,39 @@
-# Request Service API Project
+# Custom Https Dev Env API Project
+
+[YouTube - Custom HTTPS Dev Environment using .NET Core, Kestrel & certificates](https://www.youtube.com/watch?v=96KHOaIe19w)
 
 ## Packages Installation
 
-### Configuration
+
+## Usefull Installations
+### Dev Https Certificates
+```bash
+dotnet dev-certs https --trust
+```
+### Add domain name into hosts
+```bash
+127.0.0.1 weather.io
+```
+### Add https certificates to the new domain name
+open powershell as administrator and ...
+```bash
+$cert = New-SelfSignedCertificate -certstorelocation cert:\localmachine\my -dns weather.io
+```
+```bash
+$pwd = ConvertTo-SecureString -String "pa55w0rd!" -Force -AsPlainText
+```
+```bash
+$certpath = "Cert:\localmachine\my\$($cert.Thumbprint)"
+```
+```bash
+Export-PfxCertificate -Cert $certpath -FilePath c:\LocalDevHttpsCertificates\Weather.pfx -Password $pwd
+```
+(Win + R cert) to open certificates goto Trusted Root Certification Authorities righ click All Tasks -> Import and goto c:\LocalDevHttpsCertificates\Weather.pfx 
 
 ```bash
-dotnet add .\ResponseService.csproj package Microsoft.Extensions.Configuration
+dotnet user-secrets set "CertPassword" "pa55w0rd!"
 ```
-
-```bash
-dotnet add .\ResponseService.csproj package Microsoft.Extensions.Configuration.Json
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Microsoft.Extensions.DependencyInjection
-```
-
-### Log
-
-```bash
-dotnet add .\ResponseService.csproj package Microsoft.Extensions.Logging
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Microsoft.Extensions.Logging.Configuration
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Microsoft.Extensions.Logging.Console
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Microsoft.Extensions.Logging.Debug
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Microsoft.Extensions.Logging.EventLog
-```
-
-### Serilog
-
-```bash
-dotnet add .\ResponseService.csproj package Serilog
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Serilog.AspNetCore
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Serilog.Extensions.Hosting
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Serilog.Extensions.Logging
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Serilog.Formatting.Compact
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Serilog.Settings.Configuration
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Serilog.Sinks.Console
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Serilog.Sinks.Debug
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Serilog.Sinks.Email
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Serilog.Sinks.File
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Serilog.Sinks.Http
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Serilog.Sinks.MSSqlServer
-```
-
-### Nswag
-```bash
-dotnet add .\ResponseService.csproj package Microsoft.AspNetCore.OpenApi
-```
-
-```bash
-dotnet add .\ResponseService.csproj package NSwag.AspNetCore
-```
-
-```bash
-dotnet add .\ResponseService.csproj package NSwag.MSBuild
-```
-
-### API Versioning
-```bash
-dotnet add .\ResponseService.csproj package Microsoft.AspNetCore.Mvc.Versioning
-```
-
-```bash
-dotnet add .\ResponseService.csproj package Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer
-```
-
-### Http POLLY
-```bash
-dotnet add .\ResponseService.csproj package Microsoft.Extensions.Http.Polly
-```
+Kestrel certificate passwords are in -> C:\Users\\{user}\AppData\Roaming\Microsoft\UserSecrets
 
 ## Set Running Environment
 ```bash

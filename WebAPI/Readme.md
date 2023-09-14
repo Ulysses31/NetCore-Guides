@@ -1,5 +1,7 @@
 # Web API Project
 
+[YouTube - .Net Core MVC REST API](https://www.youtube.com/watch?v=mUAZ-EbGBOg)
+
 ## Packages Installation
 
 ### MVC

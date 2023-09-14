@@ -44,7 +44,8 @@
       "ms-vscode-remote.remote-wsl",
       "zxh404.vscode-proto3",
       "eridem.vscode-nupkg",
-      "ms-kubernetes-tools.vscode-kubernetes-tools"
+      "ms-kubernetes-tools.vscode-kubernetes-tools",
+	  "heaths.vscode-guid"
     ]
   }
 }

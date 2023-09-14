@@ -1,5 +1,7 @@
 # Request Service API Project
 
+[YouTube - Fault Handling with Polly](https://www.youtube.com/watch?v=DSMdUvL8N30)
+
 ## Packages Installation
 
 ### Configuration
