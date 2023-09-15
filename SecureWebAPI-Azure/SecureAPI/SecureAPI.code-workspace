@@ -1,0 +1,51 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {},
+	"extensions": {
+    "recommendations": [
+      "formulahendry.auto-close-tag",
+      "formulahendry.auto-rename-tag",
+      "teabyii.ayu",
+      "ms-azuretools.vscode-docker",
+      "github.vscode-pull-request-github",
+      "eamodio.gitlens",
+      "ms-vsliveshare.vsliveshare",
+      "pkief.material-icon-theme",
+      "christian-kohler.path-intellisense",
+      "esbenp.prettier-vscode",
+      "vscode-icons-team.vscode-icons",
+      "bierner.emojisense",
+      "adpyke.codesnap",
+      "editorconfig.editorconfig",
+      "mhutchie.git-graph",
+      "donjayamanne.githistory",
+      "ritwickdey.liveserver",
+      "yzhang.markdown-all-in-one",
+      "humao.rest-client",
+      "wayou.vscode-todo-highlight",
+      "gitpod.gitpod-theme",
+      "dotjoshjohnson.xml",
+      "ms-dotnettools.csharp",
+      "k--kato.docomment",
+      "kreativ-software.csharpextensions",
+      "jorgeserrano.vscode-csharp-snippets",
+      "fudge.auto-using",
+      "tintoy.msbuild-project-tools",
+      "github.copilot",
+      "fudge.auto-using",
+      "monokai.theme-monokai-pro-vscode",
+      "ms-vscode-remote.remote-containers",
+      "mongodb.mongodb-vscode",
+      "ms-mssql.mssql",
+      "ms-vscode-remote.remote-wsl",
+      "zxh404.vscode-proto3",
+      "eridem.vscode-nupkg",
+      "ms-kubernetes-tools.vscode-kubernetes-tools",
+      "heaths.vscode-guid"
+    ]
+  }
+}
