@@ -45,7 +45,10 @@
       "zxh404.vscode-proto3",
       "eridem.vscode-nupkg",
       "ms-kubernetes-tools.vscode-kubernetes-tools",
-	  "heaths.vscode-guid"
+	  "heaths.vscode-guid",
+      "mtxr.sqltools",
+      "ms-dotnettools.csdevkit",
+      "ms-dotnettools.vscodeintellicode-csharp"
     ]
   }
 }
