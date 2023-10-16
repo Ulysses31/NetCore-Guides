@@ -48,8 +48,8 @@ namespace DatabaseLibrary.MsSqlDatabase.DatabaseRepo
 
     #endregion Async
 
-    abstract void SaveChanges(DbContext context);
+    abstract int SaveChanges(DbContext context);
 
-    abstract void SaveChangesAsync(DbContext context);
+    abstract Task<int> SaveChangesAsync(DbContext context);
   }
 }

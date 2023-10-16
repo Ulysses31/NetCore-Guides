@@ -135,7 +135,6 @@ namespace DatabaseLibrary.MsSqlDatabase.DatabaseRepo
 
         TEntity entityToUpdate = Filter(predicate).FirstOrDefault();
 
-
         entityToUpdate = entity;
 
         _context.Entry(entity).State = EntityState.Modified;
@@ -233,7 +232,7 @@ namespace DatabaseLibrary.MsSqlDatabase.DatabaseRepo
 
         await _context.Set<TEntity>().AddAsync(entity);
 
-        SaveChangesAsync(_context);
+        await SaveChangesAsync(_context);
 
         return entity;
       }
@@ -262,7 +261,7 @@ namespace DatabaseLibrary.MsSqlDatabase.DatabaseRepo
 
         _context.Entry(entity).State = EntityState.Modified;
 
-        SaveChangesAsync(_context);
+        await SaveChangesAsync(_context);
 
         return await Task.FromResult(entityToUpdate);
       }
@@ -283,7 +282,7 @@ namespace DatabaseLibrary.MsSqlDatabase.DatabaseRepo
 
         _context.Set<TEntity>().Remove(entity);
 
-        SaveChangesAsync(_context);
+        await SaveChangesAsync(_context);
 
         return await Task.FromResult(entity);
       }
@@ -295,11 +294,11 @@ namespace DatabaseLibrary.MsSqlDatabase.DatabaseRepo
 
     #endregion
 
-    public override void SaveChanges(DbContext context)
+    public override int SaveChanges(DbContext context)
     {
       try
       {
-        context.SaveChanges();
+        return context.SaveChanges();
       }
       catch (Exception ex)
       {
@@ -307,11 +306,11 @@ namespace DatabaseLibrary.MsSqlDatabase.DatabaseRepo
       }
     }
 
-    public override void SaveChangesAsync(DbContext context)
+    public override async Task<int> SaveChangesAsync(DbContext context)
     {
       try
       {
-        _context.SaveChangesAsync();
+        return await _context.SaveChangesAsync();
       }
       catch (Exception ex)
       {
