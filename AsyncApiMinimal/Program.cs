@@ -16,10 +16,8 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Services.AddDbContext<AppDbContext>(
     options => options.UseSqlite("Data Source=RequestDB.db"));
-
 
 var app = builder.Build();
 
@@ -27,8 +25,6 @@ app.UseHttpsRedirection();
 
 
 // Endpoints
-
-
 #region Domain Users
 // Create Domain USers
 app.MapPost(
@@ -58,8 +54,8 @@ app.MapPost(
                         Email = $"newuser_{i}@domain.com"
                     };
 
-                    await context!.DomainUsers.AddAsync(user);
                     Console.WriteLine($"User {user.Name} added..");
+                    await context!.DomainUsers.AddAsync(user);
                 }
                 var results = await context!.SaveChangesAsync();
 
@@ -73,9 +69,11 @@ app.MapPost(
             }
             catch (System.Exception e)
             {
+                Console.WriteLine($"--> {e.Message} - {e.InnerException!.Message}");
+                
                 await AddBatchProcessItem(b.RequestId, $"Failed... {e.Message} - {e.InnerException!.Message}");
                 await ChangeStatusBatch(b.RequestId, StatusEnum.FAILED);
-                Console.WriteLine($"--> {e.Message} - {e.InnerException!.Message}");
+                
                 return Results.Problem(new ProblemDetails()
                 {
                     Title = "Internal Server Error",
