@@ -57,7 +57,7 @@ app.MapGet("api/v1/executeinparallel/{id}", async (Guid id) =>
             employeeDetails,
                       employeeSalary,
                           employeeRating
-    ) = await new MultiTaskExtensions(logFactory!).WhenAll(
+    ) = await MultiTaskExtensions.WhenAll(
         employeeDetailsTask,
         employeeSalaryTask,
         employeeRatingTask
