@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>ApiBenchmarkDotNet.BenchMarks.SameApiExecutorBenchmark-20231017-003412</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.22621
+11th Gen Intel Core i7-1165G7 2.80GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK=7.0.402
+  [Host]     : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT
+  DefaultJob : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                    Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Ratio</th><th>RatioSD</th><th>Rank</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>ExecuteUsingParallelForeachAsync</td><td>30.77 ms</td><td>0.610 ms</td><td>0.932 ms</td><td>31.09 ms</td><td>0.36</td><td>0.04</td><td>1</td><td>88 KB</td>
+</tr><tr><td>ExecuteUsingParallelForeach</td><td>31.01 ms</td><td>0.334 ms</td><td>0.296 ms</td><td>31.03 ms</td><td>0.37</td><td>0.04</td><td>1</td><td>81 KB</td>
+</tr><tr><td>ExecuteUsingNormalForEach</td><td>88.79 ms</td><td>2.296 ms</td><td>6.769 ms</td><td>91.13 ms</td><td>1.00</td><td>0.00</td><td>2</td><td>91 KB</td>
+</tr></tbody></table>
+</body>
+</html>
