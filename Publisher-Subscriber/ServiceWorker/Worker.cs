@@ -1,5 +1,8 @@
 using System.Globalization;
 using System.Net.Http.Json;
+using System.Runtime.CompilerServices;
+using MailKit.Net.Smtp;
+using MimeKit;
 using ServiceWorker.Dtos;
 
 namespace ServiceWorker;
@@ -27,17 +30,17 @@ public class Worker : BackgroundService
         using PeriodicTimer timer = new PeriodicTimer(interval);
 
         _logger.LogInformation(
-            "Worker running and listening at: {time} sync every {seconds} seconds...", 
-            DateTimeOffset.Now, 
+            "Worker running and listening at: {time} sync every {seconds} seconds...",
+            DateTimeOffset.Now,
             interval
         );
 
-        while (!stoppingToken.IsCancellationRequested && 
+        while (!stoppingToken.IsCancellationRequested &&
             await timer.WaitForNextTickAsync(stoppingToken)
         )
         {
             Console.WriteLine($"--> Last sync at {DateTime.Now}...");
-           
+
             List<int> ackIds = await GetMessagesAsync(_httpClient);
 
             await Task.Delay(2000, stoppingToken);
@@ -52,6 +55,7 @@ public class Worker : BackgroundService
     private static async Task<List<int>> GetMessagesAsync(HttpClient httpClient)
     {
         List<int> ackIds = new List<int>();
+        List<Task> mailTasks = new List<Task>();
 
         try
         {
@@ -70,6 +74,20 @@ public class Worker : BackgroundService
                 Console.WriteLine($"[{DateTime.Now}] {msg.Id} - {msg.TopicMessage} - {msg.MessageStatus}");
 
                 ackIds.Add(msg.Id);
+            }
+
+            // Prepare to send emails
+            foreach (var msg in newMessages!)
+            {
+                var newMailTask = SendEmailMessage($"[{DateTime.Now}] {msg.Id} - {msg.TopicMessage} - {msg.MessageStatus}");
+                mailTasks.Add(newMailTask);
+            }
+
+            // Send emails
+            if (mailTasks.Any())
+            {
+                Thread.Sleep(250);
+                Task.WhenAll(mailTasks).Start();
             }
         }
         catch (System.Exception)
@@ -114,4 +132,50 @@ public class Worker : BackgroundService
 
     }
 
+    private static async Task SendEmailMessage(string? messageBody)
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine($"--> [{DateTime.Now}] Sending email...");
+
+        try
+        {
+            var message = new MimeMessage();
+            message.From.Add(new MailboxAddress("Subscriber Background Service", "test@mailtrap.com"));
+            message.To.Add(new MailboxAddress("Mrs. Iordanidis Chris", "iordanidischr@gmail.com"));
+            message.Subject = $"Subscriber - {messageBody}";
+
+            message.Body = new TextPart("html")
+            {
+                Text = $"<p>{messageBody}</p>"
+            };
+
+            using var client = new SmtpClient();
+            // await client.ConnectAsync("smtp.gmail.com", 587, false);
+            // await client.ConnectAsync("smtp.office365.com", 587, false);
+            // MailTrap
+            await client.ConnectAsync("sandbox.smtp.mailtrap.io", 2525, false);
+
+            // Note: only needed if the SMTP server requires authentication
+            // await client.AuthenticateAsync("iordanidischr@gmail.com", "lneafouykxxsfrqs");
+            //await client.AuthenticateAsync("nazgoul78@hotmail.com", "lneafouykxxsfrqs");
+            // MailTrap
+            await client.AuthenticateAsync("bed5a2f0e0600a", "f849cb11459b84");
+
+            await client.SendAsync(message);
+            await client.DisconnectAsync(true);
+
+            Thread.Sleep(250);
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"--> [{DateTime.Now}] Sending email succedded...");
+        }
+        catch (System.Exception ex)
+        {
+            Console.WriteLine($"--> {ex.Message}");
+        }
+        finally
+        {
+            Console.ResetColor();
+        }
+    }
 }
