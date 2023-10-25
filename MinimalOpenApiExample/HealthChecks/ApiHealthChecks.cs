@@ -14,6 +14,17 @@ namespace MinimalOpenApiExample.HealthChecks
     /// </summary>
     public class ApiHealthChecks : IHealthCheck
     {
+        private readonly IHttpClientFactory _httpClientFactory;
+
+        /// <summary>
+        /// ApiHealthChecks constructor
+        /// </summary>
+        /// <param name="httpClientFactory">IHttpClientFactory</param>
+        public ApiHealthChecks(IHttpClientFactory httpClientFactory)
+        {
+            _httpClientFactory = httpClientFactory;
+        }
+
         /// <summary>
         /// CheckHealthAsync
         /// </summary>
@@ -25,21 +36,18 @@ namespace MinimalOpenApiExample.HealthChecks
             CancellationToken cancellationToken = default
         )
         {
-            var catUrl = "https://localhost:7000/api/orders/1";
+            HttpClient httpClient = _httpClientFactory.CreateClient("api-health-check");
 
-            var client = new HttpClient();
-
-            client.BaseAddress = new Uri(catUrl);
-
-            HttpResponseMessage response = await client.GetAsync("");
+            HttpResponseMessage response = 
+                await httpClient.GetAsync(httpClient.BaseAddress, cancellationToken);
 
             return response.StatusCode == HttpStatusCode.OK ?
                 await Task.FromResult(new HealthCheckResult(
                       status: HealthStatus.Healthy,
-                      description: $"The API {catUrl} is healthy 😃")) :
+                      description: $"The API {httpClient.BaseAddress} is healthy 😃")) :
                 await Task.FromResult(new HealthCheckResult(
                       status: HealthStatus.Unhealthy,
-                      description: $"The API {catUrl} is sick 😒"));
+                      description: $"The API {httpClient.BaseAddress} is sick 😒"));
         }
     }
 }

@@ -24,11 +24,20 @@ using HealthChecks.UI.Client;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using System.Net;
 using MinimalOpenApiExample.HealthChecks;
+using Microsoft.AspNetCore.RateLimiting;
+using MinimalOpenApiExample.RateLimitConfig;
+using Microsoft.Extensions.Configuration;
+using System.Threading.RateLimiting;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
+var envName = builder.Environment.EnvironmentName;
 
 // Add services to the container.
+
+// Logging
+#region Logger
 services.AddHttpLogging(options =>
 {
     options.LoggingFields = Microsoft.AspNetCore.HttpLogging.HttpLoggingFields.All;
@@ -47,8 +56,41 @@ var _logger = new LoggerConfiguration()
   .ReadFrom.Configuration(builder.Configuration)
   .CreateLogger();
 builder.Logging.AddSerilog(_logger);
+#endregion Logger
+
+// AspNetCoreRateLimit
+#region RateLimit
+var myOptions = new MyRateLimitOptions();
+var fixedPolicy = "fixed";
+var tokenPolicy = "token";
+// builder.Services.Configure<MyRateLimitOptions>(
+//     builder.Configuration.GetSection(MyRateLimitOptions.MyRateLimit)
+// );
+// builder.Configuration.GetSection(MyRateLimitOptions.MyRateLimit).Bind(myOptions);
+builder.Services.AddRateLimiter(opt =>
+{
+    opt.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+    opt.AddFixedWindowLimiter(fixedPolicy, options =>
+    {
+        options.PermitLimit = myOptions.PermitLimit;                //2
+        options.Window = TimeSpan.FromSeconds(myOptions.Window);    //5s
+        options.QueueProcessingOrder = QueueProcessingOrder.NewestFirst;
+        options.QueueLimit = myOptions.QueueLimit;                  //5
+    });
+    opt.AddTokenBucketLimiter(policyName: tokenPolicy, options =>
+    {
+        options.TokenLimit = myOptions.TokenLimit;
+        options.QueueProcessingOrder = QueueProcessingOrder.NewestFirst;
+        options.QueueLimit = myOptions.QueueLimit;
+        options.ReplenishmentPeriod = TimeSpan.FromSeconds(myOptions.ReplenishmentPeriod);
+        options.TokensPerPeriod = myOptions.TokensPerPeriod;
+        options.AutoReplenishment = myOptions.AutoReplenishment;
+    });
+});
+#endregion RateLimit
 
 // Health Checks
+#region HealthChecks
 builder.Services
   .AddHealthChecks()
   // .AddSqlServer(builder.Configuration["ConnectionStrings:MsSqlConnection"])
@@ -62,6 +104,15 @@ builder.Services.AddHealthChecksUI(options =>
     options.AddHealthCheckEndpoint("Health Checks API", "/health"); //Sets the Health Check endpoint
 }).AddInMemoryStorage(); //Here is the memory bank configuration
 
+// HTTP Clients
+builder.Services.AddHttpClient("api-health-check", options =>
+{
+    options.BaseAddress = new Uri("https://localhost:7000/api/orders/1");
+    options.DefaultRequestHeaders.Add("x-api-version", "1.0");
+});
+#endregion HealthChecks
+
+// Swagger
 #region Swagger
 services.AddAuthentication().AddJwtBearer();
 
@@ -134,6 +185,8 @@ services.AddSwaggerGen(options =>
 });
 #endregion Swagger
 
+
+
 // Configure the HTTP request pipeline.
 var app = builder.Build();
 var healthChecks = app.NewApiVersionSet("HealthChecks").Build();
@@ -153,6 +206,7 @@ app.MapGet("/health", async () =>
            : (int)HttpStatusCode.ServiceUnavailable);
 })
    .Produces(200)
+   .Produces(429)
    .Produces(503)
    .WithApiVersionSet(healthChecks)
    .HasApiVersion(1.0);
@@ -166,9 +220,11 @@ app.MapGet("/api/orders/{id:int}", async (int? id) =>
    .Produces<OrderV1>(200, "application/json", new string[] { "application/xml" })
    .Produces(401)
    .Produces(404)
+   .Produces(429)
    .WithApiVersionSet(orders)
    .HasDeprecatedApiVersion(0.9)
-   .HasApiVersion(1.0);
+   .HasApiVersion(1.0)
+   .RequireRateLimiting(fixedPolicy);
 
 app.MapPost("/api/orders", async (HttpRequest request, OrderV1 order) =>
     {
@@ -183,6 +239,7 @@ app.MapPost("/api/orders", async (HttpRequest request, OrderV1 order) =>
    .Produces<OrderV1>(201, "application/json", new string[] { "application/xml" })
    .Produces(400)
    .Produces(401)
+   .Produces(429)
    .WithApiVersionSet(orders)
    .HasApiVersion(1.0);
 
@@ -196,6 +253,7 @@ app.MapMethods(
    .Produces(400)
    .Produces(401)
    .Produces(404)
+   .Produces(429)
    .WithApiVersionSet(orders)
    .HasApiVersion(1.0);
 
@@ -213,6 +271,7 @@ app.MapGet("/api/orders", async () =>
    .Produces<IEnumerable<OrderV2>>(200, "application/json", new string[] { "application/xml" })
    .Produces(401)
    .Produces(404)
+   .Produces(429)
    .WithApiVersionSet(orders)
    .HasApiVersion(2.0);
 
@@ -224,6 +283,7 @@ app.MapGet("/api/orders/{id:int}", async (int id) =>
    .Produces<OrderV2>(200, "application/json", new string[] { "application/xml" })
    .Produces(401)
    .Produces(404)
+   .Produces(429)
    .WithApiVersionSet(orders)
    .HasApiVersion(2.0);
 
@@ -240,6 +300,7 @@ app.MapPost("/api/orders", async (HttpRequest request, OrderV2 order) =>
    .Produces<OrderV2>(201, "application/json", new string[] { "application/xml" })
    .Produces(400)
    .Produces(401)
+   .Produces(429)
    .WithApiVersionSet(orders)
    .HasApiVersion(2.0);
 
@@ -253,6 +314,7 @@ app.MapMethods(
    .Produces(400)
    .Produces(401)
    .Produces(404)
+   .Produces(429)
    .WithApiVersionSet(orders)
    .HasApiVersion(2.0);
 
@@ -270,7 +332,8 @@ app.MapGet("/api/orders", async () =>
    .Produces<IEnumerable<OrderV3>>(200, "application/json", new string[] { "application/xml" })
    .Produces(401)
    .Produces(404)
-   .WithApiVersionSet(orders)
+      .Produces(429)
+.WithApiVersionSet(orders)
    .HasApiVersion(3.0);
 
 app.MapGet("/api/orders/{id:int}", async (int id) =>
@@ -281,6 +344,7 @@ app.MapGet("/api/orders/{id:int}", async (int id) =>
    .Produces<OrderV3>(200, "application/json", new string[] { "application/xml" })
    .Produces(401)
    .Produces(404)
+   .Produces(429)
    .WithApiVersionSet(orders)
    .HasApiVersion(3.0);
 
@@ -297,6 +361,7 @@ app.MapPost("/api/orders", async (HttpRequest request, OrderV3 order) =>
    .Produces<OrderV3>(201, "application/json", new string[] { "application/xml" })
    .Produces(400)
    .Produces(401)
+   .Produces(429)
    .WithApiVersionSet(orders)
    .HasApiVersion(3.0);
 
@@ -304,6 +369,7 @@ app.MapDelete("/api/orders/{id:int}", async (int id) => Results.NoContent())
    .RequireAuthorization("admin_greetings")
    .Produces(204)
    .Produces(401)
+   .Produces(429)
    .WithApiVersionSet(orders)
    .HasApiVersion(3.0);
 
@@ -321,6 +387,7 @@ app.MapGet("/api/v{version:apiVersion}/people/{id:int}", async (int id) =>
    .Produces<PersonV1>(200, "application/json", new string[] { "application/xml" })
    .Produces(401)
    .Produces(404)
+   .Produces(429)
    .WithApiVersionSet(people)
    .HasDeprecatedApiVersion(0.9)
    .HasApiVersion(1.0);
@@ -357,6 +424,7 @@ app.MapGet("/api/v{version:apiVersion}/people", async () =>
    .Produces<IEnumerable<PersonV2>>(200, "application/json", new string[] { "application/xml" })
    .Produces(401)
    .Produces(404)
+   .Produces(429)
    .WithApiVersionSet(people)
    .HasApiVersion(2.0);
 
@@ -374,6 +442,7 @@ app.MapGet("/api/v{version:apiVersion}/people/{id:int}", async (int id) =>
    .Produces<PersonV2>(200, "application/json", new string[] { "application/xml" })
    .Produces(401)
    .Produces(404)
+   .Produces(429)
    .WithApiVersionSet(people)
    .HasApiVersion(2.0);
 
@@ -412,6 +481,7 @@ app.MapGet("/api/v{version:apiVersion}/people", async () =>
    .Produces<IEnumerable<PersonV3>>(200, "application/json", new string[] { "application/xml" })
    .Produces(401)
    .Produces(404)
+   .Produces(429)
    .WithApiVersionSet(people)
    .HasApiVersion(3.0);
 
@@ -430,6 +500,7 @@ app.MapGet("/api/v{version:apiVersion}/people/{id:int}", async (int id) =>
    .Produces<PersonV3>(200, "application/json", new string[] { "application/xml" })
    .Produces(401)
    .Produces(404)
+   .Produces(429)
    .WithApiVersionSet(people)
    .HasApiVersion(3.0);
 
@@ -447,6 +518,7 @@ app.MapPost("/api/v{version:apiVersion}/people", async (HttpRequest request, Per
    .Produces<PersonV3>(201, "application/json", new string[] { "application/xml" })
    .Produces(400)
    .Produces(401)
+   .Produces(429)
    .WithApiVersionSet(people)
    .HasApiVersion(3.0);
 #endregion ENDPOINTS
@@ -479,5 +551,9 @@ app.UseHealthChecks("/health", new HealthCheckOptions
 
 //Sets the Health Check dashboard configuration
 app.UseHealthChecksUI(options => { options.UIPath = "/dashboard"; });
+
+app.UseRateLimiter();
+
+_logger.Information($"--> Environment: {envName}");
 
 app.Run();
