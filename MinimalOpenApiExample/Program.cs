@@ -1,12 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
 using MinimalOpenApiExample;
 using Asp.Versioning;
 using Asp.Versioning.Conventions;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using OrderV1 = MinimalOpenApiExample.Models.V1.Order;
@@ -16,7 +10,6 @@ using PersonV1 = MinimalOpenApiExample.Models.V1.Person;
 using PersonV2 = MinimalOpenApiExample.Models.V2.Person;
 using PersonV3 = MinimalOpenApiExample.Models.V3.Person;
 using System.Reflection;
-using System.IO;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
@@ -26,7 +19,6 @@ using System.Net;
 using MinimalOpenApiExample.HealthChecks;
 using Microsoft.AspNetCore.RateLimiting;
 using MinimalOpenApiExample.RateLimitConfig;
-using Microsoft.Extensions.Configuration;
 using System.Threading.RateLimiting;
 using System.Text.Json;
 
@@ -58,33 +50,50 @@ var _logger = new LoggerConfiguration()
 builder.Logging.AddSerilog(_logger);
 #endregion Logger
 
+// Client Policy
+// Enable this if any endpoint communicate with another external API endpoint
+// builder.Services.AddHttpClient(
+//     "TestClient",
+//     options =>
+//     {
+//       options.DefaultRequestHeaders.Clear();
+//       options.BaseAddress = new Uri("");
+//     }
+// ).AddPolicyHandler(
+//     req => req.Method == HttpMethod.Get
+//         ? new ClientPolicy().ExponentialHttpRetry
+//         : new ClientPolicy().LinearHttpRetry
+// );
+
 // AspNetCoreRateLimit
 #region RateLimit
-var myOptions = new MyRateLimitOptions();
+var rateLimitOptions = new MyRateLimitOptions();
 var fixedPolicy = "fixed";
 var tokenPolicy = "token";
-// builder.Services.Configure<MyRateLimitOptions>(
-//     builder.Configuration.GetSection(MyRateLimitOptions.MyRateLimit)
-// );
-// builder.Configuration.GetSection(MyRateLimitOptions.MyRateLimit).Bind(myOptions);
+builder.Services.Configure<MyRateLimitOptions>(
+    builder.Configuration.GetSection(MyRateLimitOptions.MyRateLimit)
+);
+builder.Configuration.GetSection(MyRateLimitOptions.MyRateLimit).Bind(rateLimitOptions);
 builder.Services.AddRateLimiter(opt =>
 {
+    _logger.Information(JsonSerializer.Serialize(rateLimitOptions));
+
     opt.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
     opt.AddFixedWindowLimiter(fixedPolicy, options =>
     {
-        options.PermitLimit = myOptions.PermitLimit;                //2
-        options.Window = TimeSpan.FromSeconds(myOptions.Window);    //5s
+        options.PermitLimit = rateLimitOptions.FixedWindowLimiter.PermitLimit;                //2
+        options.Window = TimeSpan.FromSeconds(rateLimitOptions.FixedWindowLimiter.Window);    //5s
         options.QueueProcessingOrder = QueueProcessingOrder.NewestFirst;
-        options.QueueLimit = myOptions.QueueLimit;                  //5
+        options.QueueLimit = rateLimitOptions.FixedWindowLimiter.QueueLimit;                  //5
     });
     opt.AddTokenBucketLimiter(policyName: tokenPolicy, options =>
     {
-        options.TokenLimit = myOptions.TokenLimit;
+        options.TokenLimit = rateLimitOptions.TokenBucketLimiter.TokenLimit;
         options.QueueProcessingOrder = QueueProcessingOrder.NewestFirst;
-        options.QueueLimit = myOptions.QueueLimit;
-        options.ReplenishmentPeriod = TimeSpan.FromSeconds(myOptions.ReplenishmentPeriod);
-        options.TokensPerPeriod = myOptions.TokensPerPeriod;
-        options.AutoReplenishment = myOptions.AutoReplenishment;
+        options.QueueLimit = rateLimitOptions.TokenBucketLimiter.QueueLimit;
+        options.ReplenishmentPeriod = TimeSpan.FromSeconds(rateLimitOptions.TokenBucketLimiter.ReplenishmentPeriod);
+        options.TokensPerPeriod = rateLimitOptions.TokenBucketLimiter.TokensPerPeriod;
+        options.AutoReplenishment = rateLimitOptions.TokenBucketLimiter.AutoReplenishment;
     });
 });
 #endregion RateLimit
