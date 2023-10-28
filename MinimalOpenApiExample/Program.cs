@@ -1,8 +1,5 @@
 using MinimalOpenApiExample;
-using Asp.Versioning;
 using Asp.Versioning.Conventions;
-using Microsoft.Extensions.Options;
-using Swashbuckle.AspNetCore.SwaggerGen;
 using OrderV1 = MinimalOpenApiExample.Models.V1.Order;
 using OrderV2 = MinimalOpenApiExample.Models.V2.Order;
 using OrderV3 = MinimalOpenApiExample.Models.V3.Order;
@@ -10,17 +7,14 @@ using PersonV1 = MinimalOpenApiExample.Models.V1.Person;
 using PersonV2 = MinimalOpenApiExample.Models.V2.Person;
 using PersonV3 = MinimalOpenApiExample.Models.V3.Person;
 using System.Reflection;
-using Microsoft.OpenApi.Models;
 using Serilog;
-using Microsoft.AspNetCore.Diagnostics.HealthChecks;
-using HealthChecks.UI.Client;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using System.Net;
-using MinimalOpenApiExample.HealthChecks;
-using Microsoft.AspNetCore.RateLimiting;
-using MinimalOpenApiExample.RateLimitConfig;
-using System.Threading.RateLimiting;
-using System.Text.Json;
+using CommonServiceCollection.CommonRateLimit;
+using CommonServiceCollection.CommonHealthCheck;
+using Microsoft.EntityFrameworkCore;
+using CommonServiceCollection.DatabaseOptions;
+using CommonServiceCollection.Swagger;
 
 var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
@@ -66,133 +60,16 @@ builder.Logging.AddSerilog(_logger);
 // );
 
 // AspNetCoreRateLimit
-#region RateLimit
-var rateLimitOptions = new MyRateLimitOptions();
-var fixedPolicy = "fixed";
-var tokenPolicy = "token";
-builder.Services.Configure<MyRateLimitOptions>(
-    builder.Configuration.GetSection(MyRateLimitOptions.MyRateLimit)
-);
-builder.Configuration.GetSection(MyRateLimitOptions.MyRateLimit).Bind(rateLimitOptions);
-builder.Services.AddRateLimiter(opt =>
-{
-    _logger.Information(JsonSerializer.Serialize(rateLimitOptions));
-
-    opt.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
-    opt.AddFixedWindowLimiter(fixedPolicy, options =>
-    {
-        options.PermitLimit = rateLimitOptions.FixedWindowLimiter.PermitLimit;                //2
-        options.Window = TimeSpan.FromSeconds(rateLimitOptions.FixedWindowLimiter.Window);    //5s
-        options.QueueProcessingOrder = QueueProcessingOrder.NewestFirst;
-        options.QueueLimit = rateLimitOptions.FixedWindowLimiter.QueueLimit;                  //5
-    });
-    opt.AddTokenBucketLimiter(policyName: tokenPolicy, options =>
-    {
-        options.TokenLimit = rateLimitOptions.TokenBucketLimiter.TokenLimit;
-        options.QueueProcessingOrder = QueueProcessingOrder.NewestFirst;
-        options.QueueLimit = rateLimitOptions.TokenBucketLimiter.QueueLimit;
-        options.ReplenishmentPeriod = TimeSpan.FromSeconds(rateLimitOptions.TokenBucketLimiter.ReplenishmentPeriod);
-        options.TokensPerPeriod = rateLimitOptions.TokenBucketLimiter.TokensPerPeriod;
-        options.AutoReplenishment = rateLimitOptions.TokenBucketLimiter.AutoReplenishment;
-    });
-});
-#endregion RateLimit
+builder.Services.CommonRateLimitSetup();
 
 // Health Checks
-#region HealthChecks
-builder.Services
-  .AddHealthChecks()
-  // .AddSqlServer(builder.Configuration["ConnectionStrings:MsSqlConnection"])
-  // .AddDbContextCheck<CommandContext>()
-  .AddCheck<ApiHealthChecks>("API api/orders/1");
-
-builder.Services.AddHealthChecksUI(options =>
-{
-    options.SetEvaluationTimeInSeconds(60);       //Sets the time interval in which HealthCheck will be triggered
-    options.MaximumHistoryEntriesPerEndpoint(10); //Sets the maximum number of records displayed in history
-    options.AddHealthCheckEndpoint("Health Checks API", "/health"); //Sets the Health Check endpoint
-}).AddInMemoryStorage(); //Here is the memory bank configuration
-
-// HTTP Clients
-builder.Services.AddHttpClient("api-health-check", options =>
-{
-    options.BaseAddress = new Uri("https://localhost:7000/api/orders/1");
-    options.DefaultRequestHeaders.Add("x-api-version", "1.0");
-});
-#endregion HealthChecks
+builder.Services.CommonHealthCheckSetup<DbContext>(
+    "https://localhost:7000/api/orders/1",
+    DbTypeEnum.MsSql
+);
 
 // Swagger
-#region Swagger
-services.AddAuthentication().AddJwtBearer();
-
-services.AddAuthorizationBuilder()
-  .AddPolicy("admin_greetings", policy =>
-    policy
-      .RequireRole("admin")
-      .RequireClaim("scope", "greetings_api"));
-
-services.AddEndpointsApiExplorer();
-services.AddApiVersioning(
-        options =>
-        {
-            // reporting api versions will return the headers
-            // "api-supported-versions" and "api-deprecated-versions"
-            options.ReportApiVersions = true;
-
-            options.ApiVersionReader = ApiVersionReader.Combine(
-              new UrlSegmentApiVersionReader(),
-              new HeaderApiVersionReader("x-api-version"),
-              new MediaTypeApiVersionReader("x-api-version")
-            );
-
-            options.Policies.Sunset(0.9)
-                            .Effective(DateTimeOffset.Now.AddDays(60))
-                            .Link("policy.html")
-                                .Title("Versioning Policy")
-                                .Type("text/html");
-        })
-    .AddApiExplorer(
-        options =>
-        {
-            // add the versioned api explorer, which also adds IApiVersionDescriptionProvider service
-            // note: the specified format code will format the version as "'v'major[.minor][-status]"
-            options.GroupNameFormat = "'v'VVV";
-
-            // note: this option is only necessary when versioning by url segment. the SubstitutionFormat
-            // can also be used to control the format of the API version in route templates
-            options.SubstituteApiVersionInUrl = true;
-        });
-services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
-services.AddSwaggerGen(options =>
-{
-    options.OperationFilter<SwaggerDefaultValues>();
-    // using System.Reflection;
-    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
-
-    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-    {
-        Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
-        Name = "Authorization",
-        In = ParameterLocation.Header,
-        Type = SecuritySchemeType.ApiKey
-    });
-
-    options.AddSecurityRequirement(new OpenApiSecurityRequirement {
-    {
-      new OpenApiSecurityScheme
-      {
-        Reference = new OpenApiReference
-        {
-          Type = ReferenceType.SecurityScheme,
-          Id = "Bearer"
-        }
-      },
-      Array.Empty<string>()
-    }
-  });
-});
-#endregion Swagger
+services.CommonSwaggerSetup($"{Assembly.GetExecutingAssembly().GetName().Name}.xml");
 
 
 
@@ -233,7 +110,7 @@ app.MapGet("/api/orders/{id:int}", async (int? id) =>
    .WithApiVersionSet(orders)
    .HasDeprecatedApiVersion(0.9)
    .HasApiVersion(1.0)
-   .RequireRateLimiting(fixedPolicy);
+   .RequireRateLimiting(CommonRateLimitExtension.FixedPolicy);
 
 app.MapPost("/api/orders", async (HttpRequest request, OrderV1 order) =>
     {
@@ -532,34 +409,14 @@ app.MapPost("/api/v{version:apiVersion}/people", async (HttpRequest request, Per
    .HasApiVersion(3.0);
 #endregion ENDPOINTS
 
-app.UseSwagger();
-app.UseSwaggerUI(
-    options =>
-    {
-        var descriptions = app.DescribeApiVersions();
-
-        // build a swagger endpoint for each discovered API version
-        foreach (var description in descriptions)
-        {
-            var url = $"/swagger/{description.GroupName}/swagger.json";
-            var name = description.GroupName.ToUpperInvariant();
-            options.SwaggerEndpoint(url, name);
-        }
-    });
+app.UseCommonSwagger();
 
 app.UseHttpLogging();
 // app.UseAuthentication();
 // app.UseAuthorization();
 
 //Sets Health Check dashboard options
-app.UseHealthChecks("/health", new HealthCheckOptions
-{
-    Predicate = p => true,
-    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-});
-
-//Sets the Health Check dashboard configuration
-app.UseHealthChecksUI(options => { options.UIPath = "/dashboard"; });
+app.CommonHealthCheckUseSetup();
 
 app.UseRateLimiter();
 

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MinimalOpenApiExample.RateLimitConfig
+namespace CommonServiceCollection.CommonRateLimit
 {
     /// <summary>
     /// MyRateLimitOptions class
     /// </summary>
-    public class MyRateLimitOptions
+    public class CommonRateLimitOptions
     {
         /// <summary>
         /// MyRateLimit
@@ -18,12 +18,12 @@ namespace MinimalOpenApiExample.RateLimitConfig
         /// <summary>
         /// FixedWindowLimiter class
         /// </summary>
-        public FixedWindowLimiter FixedWindowLimiter { get; set; }
+        public FixedWindowLimiter? FixedWindowLimiter { get; set; }
 
         /// <summary>
         /// TokenBucketLimiter class
         /// </summary>
-        public TokenBucketLimiter TokenBucketLimiter { get; set; } 
+        public TokenBucketLimiter? TokenBucketLimiter { get; set; } 
     }
 
     /// <summary>

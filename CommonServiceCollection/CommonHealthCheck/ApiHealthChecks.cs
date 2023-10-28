@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
-namespace MinimalOpenApiExample.HealthChecks
+namespace CommonServiceCollection.CommonHealthCheck
 {
     /// <summary>
     /// ApiHealthChecks class
@@ -38,7 +38,7 @@ namespace MinimalOpenApiExample.HealthChecks
         {
             HttpClient httpClient = _httpClientFactory.CreateClient("api-health-check");
 
-            HttpResponseMessage response = 
+            HttpResponseMessage response =
                 await httpClient.GetAsync(httpClient.BaseAddress, cancellationToken);
 
             return response.StatusCode == HttpStatusCode.OK ?

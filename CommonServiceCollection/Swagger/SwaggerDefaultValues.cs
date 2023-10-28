@@ -1,4 +1,4 @@
-﻿namespace MinimalOpenApiExample;
+﻿namespace CommonServiceCollection.Swagger;
 
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
